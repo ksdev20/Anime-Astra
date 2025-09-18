@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+.navbar{
+    @apply flex items-center justify-around px-3 py-4 bg-transparent border-b-2;
+}
+
+.nav-menu-btn{
+    @apply cursor-pointer sm:hidden;
+}
+
+.site-logo{
+    font-family: 'Montserrat';
+    @apply text-2xl text-black font-semibold tracking-wide cursor-pointer;
+}
+
+.nav-middle{
+    @apply max-w-[40%] /*hidden*/ flex items-center flex-wrap gap-4 /*sm:flex*/;
+}
+
+.nav-middle.hidden{
+    @apply hidden;
+}
+
+.nm-btn{
+    @apply text-base font-medium underline cursor-pointer;
+}
+
+.dd-btn{
+    @apply flex items-center p-1;
+}
+
+.nm-btn:hover{
+    @apply no-underline;
+}
+
+.nav-right{
+    @apply flex gap-4;
+}
+
+.theme-btn{
+    @apply cursor-pointer;
+}
+
+.search-btn{
+    @apply cursor-pointer;
+}
+
+.search-bar{
+    @apply outline-2 p-1 text-base
+}
+
+.nm-hover-dd{
+    @apply  relative;
+}
+
+.dd-main{
+    @apply bg-[#5151e7] absolute w-[200px] py-2;
+}
+
+.dd-btn{
+    @apply flex items-center w-full text-white text-sm pl-2;
+}
+
+.dd-btn:hover{
+    @apply bg-[#3737f7];
+}
