@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "../styles/Navbar/navbar-main.css";
-import { Icon } from "../icons/icons";
+import "../../styles/Navbar/navbar-main.css";
+import { Icon } from "../../icons/icons";
 
 export function Navbar() {
   const [darkMode, setdarkMode] = useState(false);

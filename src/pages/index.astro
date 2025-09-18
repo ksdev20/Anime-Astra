@@ -1,5 +1,14 @@
 ---
-import { Navbar } from "./Navbar";
+import BlogCard from "../components/BlogCard";
+import { Navbar } from "../components/Navbar/Navbar";
+import type { BcObject } from "../types/BlogCard/blogcard";
+const bco: BcObject = {
+  title: "How Anikawa became the most succesful site",
+  subTitle: "",
+  author: "MasterMind",
+  date: "12 / 6 / 2025",
+  img: "https://images.pexels.com/photos/33856909/pexels-photo-33856909.jpeg",
+};
 ---
 
 <html lang="en">
@@ -16,5 +25,6 @@ import { Navbar } from "./Navbar";
   </head>
   <body>
     <Navbar client:load />
+    <BlogCard BcObject={bco} />
   </body>
 </html>
