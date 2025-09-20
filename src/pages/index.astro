@@ -2,13 +2,14 @@
 import BlogCard from "../components/BlogCard/BlogCard";
 import { Navbar } from "../components/Navbar/Navbar";
 import type { BcObject } from "../types/BlogCard/blogcard";
-import '../styles/global.css';
+import "../styles/global.css";
+import HeroCard from "../components/BlogCard/HeroCard";
 const bco: BcObject = {
   title: "How Anikawa became the most succesful site",
   subTitle: "",
   author: "MasterMind",
-  date: "12 / 6 / 2025",
-  img: "https://images.pexels.com/photos/33856909/pexels-photo-33856909.jpeg",
+  date: "12/6/2025",
+  img: "https://as2.ftcdn.net/v2/jpg/05/62/02/41/1000_F_562024161_tGM4lFlnO0OczLYHFFuNNdMUTG9ekHxb.jpg",
 };
 ---
 
@@ -20,14 +21,35 @@ const bco: BcObject = {
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="../scripts/theme-script.js"></script>
   </head>
-  <body>
+  <body class="light-mode">
     <Navbar client:load />
     <main class="main-body">
-      <BlogCard BcObject={bco} />
+      <div class="mb-child">
+        <section class="hero-section">
+          <div class="hs-1">
+            <HeroCard BcObject={bco} />
+          </div>
+          <div class="hs-2">
+            <HeroCard BcObject={bco} smallHero={true} />
+            <HeroCard BcObject={bco} smallHero={true} />
+          </div>
+        </section>
+        <div class="flex gap-3">
+          <div class="flex flex-wrap gap-3">
+            <BlogCard BcObject={bco} />
+            <BlogCard BcObject={bco} />
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <BlogCard BcObject={bco} />
+            <BlogCard BcObject={bco} />
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

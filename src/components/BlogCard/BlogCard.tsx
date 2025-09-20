@@ -1,5 +1,5 @@
 import { type BcObject } from '../../types/BlogCard/blogcard';
-import '../../styles/components/Individuals/BlogCard.css';
+import '../../styles/components/BlogCard/BlogCard.css';
 
 export default function BlogCard({BcObject}: {BcObject: BcObject}) {
     const {title, subTitle, author, date, img} = BcObject;

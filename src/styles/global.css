@@ -1,7 +1,33 @@
 @import "tailwindcss";
+@config '../../tailwind.config.js';
+
+/* body{
+    @apply antialiased text-base text-black bg-white dark:text-white dark:bg-black   w-full h-full overflow-x-hidden;
+} */
+
+:root{
+    --light-text: #000; 
+    --dark-text: #fff;
+    --light-dd: #B7410E;
+    --dark-dd: #FF7F50;
+    --light-h-dd: #99320C;
+    --dark-h-dd: #E76E45;
+}
+
+body{
+    @apply antialiased text-base w-full h-full overflow-x-hidden bg-white text-[var(--light-text)] dark:bg-black dark:text-[var(--dark-text)];
+}
+
+svg{
+    @apply fill-[var(--light-text)] dark:fill-[var(--dark-text)];
+}
 
 .main-body{
-    @apply px-5 py-3;
+    @apply px-3 pt-3 flex flex-col items-center;
+}
+
+.mb-child{
+    @apply flex flex-col self-center w-full max-w-[1200px] ;
 }
 
 .hov-ul:hover{

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../styles/components/Navbar/navbar-main.css";
 import { Icon } from "../../icons/icons";
+import { checkDark, toggleTheme } from "./functions/toggleTheme";
 
 export function Navbar() {
   const [darkMode, setdarkMode] = useState(false);
@@ -8,6 +9,12 @@ export function Navbar() {
   const [hov, setHov] = useState({
     about: false,
   });
+
+  useEffect(() => {
+    const isDark = checkDark();
+    // toggleTheme();
+    setdarkMode(isDark);
+  }, []);
   const toggleHover = () => setHov({ about: !hov.about });
   return (
     <header>
@@ -34,8 +41,8 @@ export function Navbar() {
             <section className={`nm-hover-dd ${!hov.about ? "hidden" : ""}`}>
               <ul className="dd-main">
                 {["About Us", "Terms of Service", "Privary Policy", "Dmca"].map(
-                  (i) => (
-                    <li>
+                  (i, idx) => (
+                    <li key={idx}>
                       <a href={"/"} className="dd-btn">
                         {i}
                       </a>
@@ -64,7 +71,13 @@ export function Navbar() {
               <Icon name="close" color="#000" />
             )}
           </button>
-          <button className="theme-btn" onClick={() => setdarkMode(!darkMode)}>
+          <button
+            className="theme-btn"
+            onClick={() => {
+              toggleTheme();
+              setdarkMode(!darkMode);
+            }}
+          >
             {darkMode ? (
               <Icon name="darkmode" color="#000" />
             ) : (

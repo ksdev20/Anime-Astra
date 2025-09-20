@@ -1,11 +1,12 @@
 @import 'tailwindcss';
+@config '../../../../tailwind.config.js';
 
 .blog-card{
     @apply flex flex-col w-[250px] aspect-square text-sm;
 }
 
 .bc-img{
-    @apply w-full aspect-[3/2] object-cover pb-2;
+    @apply w-full aspect-[3/2] object-cover pb-2 cp;
 }
 
 .bc-title{
