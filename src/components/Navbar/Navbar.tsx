@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../../styles/components/Navbar/navbar-main.css";
 import { Icon } from "../../icons/icons";
 import { checkDark, toggleTheme } from "./functions/toggleTheme";
+import { LegalItems } from "../../config/pages/config";
 
 export function Navbar() {
   const [darkMode, setdarkMode] = useState(false);
@@ -40,11 +41,11 @@ export function Navbar() {
             <span className="">About v</span>
             <section className={`nm-hover-dd ${!hov.about ? "hidden" : ""}`}>
               <ul className="dd-main">
-                {["About Us", "Terms of Service", "Privary Policy", "Dmca"].map(
+                {LegalItems.map(
                   (i, idx) => (
                     <li key={idx}>
-                      <a href={"/"} className="dd-btn">
-                        {i}
+                      <a href={i.link} className="dd-btn">
+                        {i.text}
                       </a>
                     </li>
                   )
