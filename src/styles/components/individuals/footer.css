@@ -2,9 +2,21 @@
 @config '../../../../tailwind.config.js';
 
 .site-footer{
-    @apply flex flex-col items-center flex-wrap w-full mt-10 p-10 bg-[black] dark:bg-[white] text-zinc-100 dark:text-black text-base font-medium;
+    @apply flex flex-col items-center flex-wrap w-full mt-10 p-10 bg-black dark:bg-white text-zinc-100 dark:text-black text-base font-medium;
 }
 
 .legals-sf{
     @apply flex gap-4 justify-center flex-wrap w-full;
+}
+
+.site-logo-section{
+    @apply w-full flex justify-center mb-5 relative z-[1] max-w-[800px];
+}
+
+.sls-line{
+    @apply absolute z-[-1] w-full h-[3px] bg-[gray] top-[50%];
+}
+
+.sl-main{
+    @apply p-1 bg-black dark:bg-white;
 }

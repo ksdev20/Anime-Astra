@@ -3,5 +3,6 @@ export type BcObject = {
     subTitle: string,
     author: string,
     date: string,
-    img: string
+    img: string,
+    categoryList: string[],
 }

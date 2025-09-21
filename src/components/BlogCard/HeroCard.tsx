@@ -19,7 +19,7 @@ export default function HeroCard({ BcObject, smallHero = false }: { BcObject: Bc
                 {author}
               </a>
             </span>
-            <span>{date}</span>
+            <span>⦿ {date}</span>
           </section>
         </div>
       </section>

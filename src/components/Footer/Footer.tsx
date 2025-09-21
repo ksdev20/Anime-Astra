@@ -5,22 +5,22 @@ export default function Footer() {
   return (
     <footer>
       <section className="site-footer">
-        <div className="w-full flex justify-center mb-5 relative z-[1] max-w-[800px]">
-          <div className="absolute z-[-1] w-full h-[3px] bg-[gray] top-[50%]"></div>
-          <a href="/" className="site-logo fot-sl p-1 bg-black">
+        <div className="site-logo-section">
+          <div className="sls-line"></div>
+          <a href="/" className="site-logo sl-main">
             Anime Astra
           </a>
         </div>
         <ul className="pages legals-sf mb-2">
-          {NormalPages.map((i) => (
-            <li className="sf-item">
+          {NormalPages.map((i, idx) => (
+            <li key={idx} className="sf-item">
               <a href={i.link}>{i.text}</a>
             </li>
           ))}
         </ul>
         <ul className="legals-sf">
-          {LegalItems.map((obj) => (
-            <li className="sf-item">
+          {LegalItems.map((obj, idx) => (
+            <li key={idx} className="sf-item">
               <a href={obj.link}>{obj.text}</a>
             </li>
           ))}

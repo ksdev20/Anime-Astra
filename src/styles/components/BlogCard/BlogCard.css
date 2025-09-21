@@ -24,3 +24,15 @@
 .bc-bottom{
     @apply flex items-center gap-1;
 }
+
+.categories.section{
+    @apply mt-2;
+}
+
+.category-span{
+    @apply p-1 bg-[var(--light-dd)] dark:bg-[var(--dark-dd)] rounded-2xl text-white dark:text-black text-sm font-medium;
+}
+
+.category-span:nth-child(even){
+    @apply bg-[var(--light-third)] dark:bg-[var(--dark-third)];
+}
