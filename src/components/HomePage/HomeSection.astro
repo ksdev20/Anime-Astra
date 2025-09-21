@@ -1,7 +1,8 @@
 ---
 import { HomeSections } from "../../config/HomeSecton/config";
 import BlogCard from "../BlogCard/BlogCard";
-const { sectionName } = Astro.props;
+//CH == Custom Heading
+const { sectionName, customHeading: CH = null } = Astro.props;
 const sectionObj = HomeSections.find((i) => i.name == sectionName);
 if (!sectionObj) return null;
 const { list, name, type } = sectionObj;
@@ -12,10 +13,10 @@ const isCategory = type == "category";
   {
     isCategory ? (
       <a href={`/category/${name.replaceAll(/\s+/gi, "-").toLowerCase()}`} class="hs-heading">
-        {name}
+        {CH ? CH : name}
       </a>
     ) : (
-      <header class="hs-heading">{name}</header>
+      <header class="hs-heading">{CH ? CH : name}</header>
     )
   }
   <ul class="hs-list">
