@@ -1,16 +1,38 @@
 @import 'tailwindcss';
 @config '../../../../tailwind.config.js';
 
+.non-hero-body{
+    @apply flex flex-col gap-7;
+}
+
+.home-section{
+    @apply flex flex-col gap-2;
+}
+
+.hs-heading{
+    font-family: sans-serif;
+    @apply text-3xl font-bold underline underline-offset-3;
+}
+
+.hs-list{
+    @apply flex flex-wrap gap-3;
+}
+
 .blog-card{
-    @apply flex flex-col w-[250px] aspect-square text-sm;
+    font-family: 'Roboto Mono';
+    @apply flex flex-col w-[290px] aspect-square text-sm;
 }
 
 .bc-img{
-    @apply w-full aspect-[3/2] object-cover pb-2 cp;
+    @apply w-full aspect-[3/2] object-cover cp;
+}
+
+.text-section{
+    @apply p-2 bg-cyan-50 dark:bg-black/60;
 }
 
 .bc-title{
-    @apply text-base font-medium cursor-pointer pb-1;
+    @apply text-lg font-bold cursor-pointer pb-1;
 }
 
 .bc-title:hover{
@@ -22,17 +44,5 @@
 }
 
 .bc-bottom{
-    @apply flex items-center gap-1;
-}
-
-.categories.section{
-    @apply mt-2;
-}
-
-.category-span{
-    @apply p-1 bg-[var(--light-dd)] dark:bg-[var(--dark-dd)] rounded-2xl text-white dark:text-black text-sm font-medium;
-}
-
-.category-span:nth-child(even){
-    @apply bg-[var(--light-third)] dark:bg-[var(--dark-third)];
+    @apply flex items-center gap-1 pt-2 pb-1 flex-wrap text-base;
 }

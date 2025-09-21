@@ -1,0 +1,48 @@
+---
+import CategorySection from "../components/BlogCard/CategorySection";
+import { Blogs } from "../data/Blogs";
+import Layout from "../layouts/Layout.astro";
+import "../styles/pages/blog-page.css";
+import { Creators } from "../data/Creators";
+import TocSection from "../components/BlogPage/TocSection.astro";
+import NextPrevPosts from "../components/BlogPage/NextPrevPosts.astro";
+import CreatorSection from "../components/BlogPage/CreatorSection.astro";
+import ShareSection from "../components/BlogPage/ShareSection.astro";
+
+const { slug } = Astro.params;
+const blogObj = Blogs.find((i) => i.slug == slug);
+if (!slug || !blogObj) {
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: "/404",
+    },
+  });
+}
+const { title, author, date, readMinutes, categoryList, img, toc } = blogObj;
+const creatorObj = Creators.find((i) => i.name == author);
+const creatorLink = "/creator/" + author;
+---
+
+<Layout forBlogPage={true}>
+  <header class="bp-header">
+    <h1 class="bp-h1">{title}</h1>
+    <ul class="bph-details">
+      <li>by <a href={creatorLink} class="hov-ul">{author}</a></li>
+      <li>• {date}</li>
+      <li>• {readMinutes} Minutes</li>
+    </ul>
+    <CategorySection categoryList={categoryList} />
+  </header>
+  <img
+    src={img}
+    alt={`Image for blog titled ${title}`}
+    class="bp-main-img"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <TocSection toc={toc} />
+  <NextPrevPosts />
+  <CreatorSection creatorObj={creatorObj} />
+  <ShareSection />
+</Layout>

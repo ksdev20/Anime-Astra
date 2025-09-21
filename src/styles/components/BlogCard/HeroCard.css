@@ -1,21 +1,21 @@
 @import 'tailwindcss';
 
-/* .hero-section{
-    @apply relative z-0 flex w-full gap-3 pb-5 text-white h-auto max-h-[512px] overflow-hidden;
-} */
+:root{
+    --max-h: 600px;
+}
 
 .hero-section{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    @apply relative z-0 w-full gap-2 pb-5 text-white h-auto max-h-[400px] overflow-hidden;
+    @apply relative z-0 w-full gap-2 mb-5 text-white h-auto max-h-[var(--max-h)] overflow-hidden;
 }
 
 .hs-1{
-    @apply col-start-1 max-h-[400px];
+    @apply col-start-1 max-h-[var(--max-h)];
 }
 
 .hs-2{
-    @apply col-start-2 flex flex-col w-full h-full gap-2 max-h-[400px];
+    @apply col-start-2 flex flex-col w-full h-full gap-2 max-h-[var(--max-h)];
 } 
 
 .hero-card{
@@ -23,9 +23,8 @@
 }
 
 .small-hero{
-    @apply w-full max-h-[calc(200px-6px)];
+    @apply w-full max-h-[calc(300px-4px)];
 }
-
 
 .hero-img{
     @apply w-full h-full block object-cover;

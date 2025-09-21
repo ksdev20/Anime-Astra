@@ -1,21 +1,31 @@
-import { type BcObject } from '../../types/BlogCard/blogcard';
-import '../../styles/components/BlogCard/BlogCard.css';
-import CategorySection from './CategorySection';
+import { type BcObject } from "../../types/BlogCard/blogcard";
+import "../../styles/components/BlogCard/BlogCard.css";
+import CategorySection from "./CategorySection";
 
-export default function BlogCard({BcObject}: {BcObject: BcObject}) {
-    const {title, subTitle, author, date, img, categoryList} = BcObject;
+export default function BlogCard({ BcObject }: { BcObject: BcObject }) {
+  const { title, subTitle, author, date, img, categoryList, slug, readMinutes } = BcObject;
   return (
     <div className="blog-card">
-      <img src={img} alt="" className="bc-img" />
-      <a href='/' className="bc-title">{title}</a>
-      <span className="bc-sub-title">{subTitle}</span>
-      <section className="bc-bottom">
-        <span>
-          by <a href='/' className='hov-ul'>{author}</a>
-        </span>
-        <span>⦿ {date}</span>
+      <a href={'./' + slug}>
+        <img src={img} alt="" className="bc-img" />
+      </a>
+      <section className="text-section">
+        <a href={'./' + slug} className="bc-title">
+          {title}
+        </a>
+        <a href={'./' + slug} className="bc-sub-title">{subTitle}</a>
+        <section className="bc-bottom">
+          <span>
+            by{" "}
+            <a href={"/creator/" + author} className="hov-ul">
+              {author}
+            </a>
+          </span>
+          <span>• {date}</span>
+          {readMinutes && (<span>• {readMinutes} Minutes</span>)}
+        </section>
+        <CategorySection categoryList={categoryList} />
       </section>
-      <CategorySection categoryList={categoryList} />
     </div>
   );
 }

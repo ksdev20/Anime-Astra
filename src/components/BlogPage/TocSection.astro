@@ -1,0 +1,19 @@
+---
+const { toc } = Astro.props;
+if (!toc) return null;
+---
+
+<section class="toc-section">
+  <span class="toc-text">TABLE OF CONTENTS</span>
+  <ol class="toc-list">
+    {
+      toc?.map((obj: any) => (
+        <li>
+          <a href={obj.link} class="hov-ul">
+            {obj.text}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</section>

@@ -1,0 +1,28 @@
+---
+import { Icon } from "../../icons/icons";
+
+const { creatorObj } = Astro.props;
+const {
+  name: creatorName,
+  about: aboutCreator,
+  socialMedia: creatorSocials,
+} = creatorObj ?? {};
+const creatorLink = "/creator/" + creatorName;
+---
+
+<section class="creator-section">
+  <div class="toc-text cs-text-top">ABOUT CREATOR</div>
+  <a href={creatorLink} class="cs-name">{creatorName}</a>
+  <p class="cs-about">{aboutCreator}</p>
+  <ul class="flex items-center gap-2 mt-5">
+    {
+      creatorSocials?.map((obj: any) => (
+        <li>
+          <a href={obj.link}>
+            <Icon name={obj.svg} size={30} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

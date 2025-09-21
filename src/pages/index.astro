@@ -1,58 +1,27 @@
 ---
-import BlogCard from "../components/BlogCard/BlogCard";
-import { Navbar } from "../components/Navbar/Navbar";
-import Footer from '../components/Footer/Footer';
-import type { BcObject } from "../types/BlogCard/blogcard";
 import "../styles/global.css";
 import HeroCard from "../components/BlogCard/HeroCard";
-const bco: BcObject = {
-  title: "How Anikawa became the most succesful site",
-  subTitle: "",
-  author: "MasterMind",
-  date: "12/6/2025",
-  img: "https://as2.ftcdn.net/v2/jpg/05/62/02/41/1000_F_562024161_tGM4lFlnO0OczLYHFFuNNdMUTG9ekHxb.jpg",
-  categoryList: ['Action', 'Adventure', 'Comedy'],
-};
+import HomeSection from "../components/HomePage/HomeSection.astro";
+import { Blogs } from "../data/Blogs";
+import Layout from "../layouts/Layout.astro";
+const bco = Blogs[0];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="../scripts/theme-script.js"></script>
-  </head>
-  <body class="light-mode">
-    <Navbar client:load />
-    <main class="main-body">
-      <div class="mb-child">
-        <section class="hero-section">
-          <div class="hs-1">
-            <HeroCard BcObject={bco} />
-          </div>
-          <div class="hs-2">
-            <HeroCard BcObject={bco} smallHero={true} />
-            <HeroCard BcObject={bco} smallHero={true} />
-          </div>
-        </section>
-        <div class="flex gap-3">
-          <div class="flex flex-wrap gap-3">
-            <BlogCard BcObject={bco} />
-            <BlogCard BcObject={bco} />
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <BlogCard BcObject={bco} />
-            <BlogCard BcObject={bco} />
-          </div>
-        </div>
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <section class="hero-section">
+    <div class="hs-1">
+      <HeroCard BcObject={bco} />
+    </div>
+    <div class="hs-2">
+      <HeroCard BcObject={bco} smallHero={true} />
+      <HeroCard BcObject={bco} smallHero={true} />
+    </div>
+  </section>
+  <section class="non-hero-body">
+    <HomeSection sectionName="Latest" />
+    <HomeSection sectionName="Action" />
+    <HomeSection sectionName="Comedy" />
+    <HomeSection sectionName="Adventure" />
+    <HomeSection sectionName="Slice of Life" />
+  </section>
+</Layout>

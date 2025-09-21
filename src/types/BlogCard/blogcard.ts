@@ -5,4 +5,12 @@ export type BcObject = {
     date: string,
     img: string,
     categoryList: string[],
+    slug: string,
+    readMinutes?: number,
+    toc?: TOC[],
+}
+
+type TOC = {
+    text: string,
+    link: string,
 }

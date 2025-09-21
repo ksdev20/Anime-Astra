@@ -29,7 +29,11 @@ svg{
 }
 
 .mb-child{
-    @apply flex flex-col self-center w-full max-w-[1200px] ;
+    @apply flex flex-col self-center w-full max-w-[1300px] min-h-[1000px];
+}
+
+.mbc-blog-page{
+    @apply max-w-[1000px];
 }
 
 .hov-ul:hover{

@@ -1,0 +1,19 @@
+---
+import { SocialItems } from "../../config/socialMedia/config";
+import { Icon } from "../../icons/icons";
+---
+
+<section class="share-section">
+  <span class="text-2xl font-medium">Share</span>
+  <ul class="share-list">
+    {
+      SocialItems?.map((obj: any) => (
+        <li>
+          <a href={obj.link}>
+            <Icon name={obj.svg} size={30} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

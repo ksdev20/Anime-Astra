@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@config '../../../tailwind.config.js';
+
+/*Blog Page Header*/
+
+.bp-header{
+    @apply flex flex-col justify-center w-full min-h-[100px] p-5;
+}
+
+.bp-h1{
+    font-family: 'Montserrat' sans-serif;
+    @apply text-4xl font-bold mt-10;
+}
+
+.bph-details{
+    @apply flex items-center gap-3 text-lg font-medium mt-3;
+}
+
+.bp-main-img{
+    @apply w-full max-w-[900px];
+}
+
+/*Table Of Contents*/
+.toc-section{
+    @apply flex flex-col relative z-0 my-10 w-70 h-fit border-3 rounded-2xl p-5;
+}
+
+.toc-text{
+    @apply absolute z-10 top-0 left-[50%] translate-[-50%] text-lg font-bold bg-white dark:bg-black px-1 min-w-47;
+}
+
+.toc-list{
+    @apply flex flex-col gap-2 list-decimal pl-5 text-base font-medium;
+}
+
+/*share section*/
+.share-section{
+    @apply border-y-1 border-y-[gray] py-5 my-5 flex items-center justify-end gap-4;
+}
+
+.share-list{
+    @apply flex gap-2;
+}
+
+.social-icon{
+    @apply w-15 aspect-square;
+}
+
+/*creator section*/
+.creator-section{
+    @apply relative z-0 flex flex-col items-center p-10 border-3 rounded-4xl mx-10;
+}
+
+.cs-text-top{
+    @apply min-w-min;
+}
+
+.cs-name{
+    font-family: 'Roboto Mono';
+    @apply text-2xl font-bold mb-3 text-[var(--light-dd)] dark:text-[var(--dark-dd)] underline underline-offset-4;
+}
+
+.cs-name:hover{
+    @apply no-underline;
+}
+
+.cs-about{
+    @apply text-base text-center font-medium;
+}
+
+/*next prev post section*/
+.next-prev-posts{
+    @apply flex justify-between w-full items-center my-8 border-y-1 border-[gray] py-5;
+}
+
+.npp-btn{
+    @apply flex items-center px-2 py-3 rounded-xl gap-2 bg-[var(--light-third)] dark:bg-[var(--dark-third)] text-white;
+}
+
+.npp-btn svg{
+    @apply fill-white;
+}
+
+.npp-text{
+    @apply text-base font-medium;
+}
