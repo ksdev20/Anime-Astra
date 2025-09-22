@@ -26,7 +26,7 @@
 }
 
 .toc-text{
-    @apply absolute z-10 top-0 left-[50%] translate-[-50%] text-lg font-bold bg-white dark:bg-black px-1 min-w-47;
+    @apply absolute z-10 top-0 left-[50%] translate-[-50%] text-lg font-bold bg-white dark:bg-black px-1 min-w-max;
 }
 
 .toc-list{
@@ -48,16 +48,16 @@
 
 /*creator section*/
 .creator-section{
-    @apply relative z-0 flex flex-col items-center p-10 border-3 rounded-4xl mx-10;
+    @apply relative z-0 flex flex-col items-center py-15 px-10 border-3 rounded-4xl mx-10;
 }
 
 .cs-text-top{
-    @apply min-w-min;
+    @apply text-2xl px-2;
 }
 
 .cs-name{
     font-family: 'Roboto Mono';
-    @apply text-2xl font-bold mb-3 text-[var(--light-dd)] dark:text-[var(--dark-dd)] underline underline-offset-4;
+    @apply text-3xl font-bold mb-5 text-[var(--light-dd)] dark:text-[var(--dark-dd)] underline underline-offset-4;
 }
 
 .cs-name:hover{
@@ -83,4 +83,53 @@
 
 .npp-text{
     @apply text-base font-medium;
+}
+
+/*Comments Section */
+.bp-comment-section{
+    @apply border-t-1 border-[gray] my-10 py-5 flex flex-col w-full;
+}
+
+.comments-list{
+    @apply border-t-1 border-[gray] my-10 flex flex-col gap-8;
+}
+
+.add-comment-section{
+    @apply border-y-1 border-[gray] p-5 flex flex-col items-center my-10 py-10 gap-5;
+}
+
+.acs-head{
+    @apply font-medium text-3xl no-underline;
+}
+
+.acs-form{
+    @apply z-0 w-full flex flex-col gap-2;
+}
+
+.acs-label{
+    @apply text-2xl font-medium underline;
+}
+
+.invalid{
+    @apply text-[red];
+}
+
+.name-email-sec{
+    @apply flex gap-5 w-full;
+}
+
+.acs-input{
+    @apply outline-2 w-[100%] p-3 h-10 text-lg font-medium pl-3;
+}
+
+.comment-input{
+    @apply w-full h-auto min-h-[150px] max-h-[600px] py-2;
+}
+
+.comment-actions{
+    @apply w-full flex items-center justify-center py-5 gap-5;
+}
+
+.ca-btn{
+    @apply flex justify-center items-center w-40 h-12 rounded-2xl cursor-pointer text-lg font-medium border-3 border-[var(--light-dd)] bg-[var(--light-dd)] text-white;
 }

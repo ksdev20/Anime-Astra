@@ -9,6 +9,7 @@ import NextPrevPosts from "../components/BlogPage/NextPrevPosts.astro";
 import CreatorSection from "../components/BlogPage/CreatorSection.astro";
 import ShareSection from "../components/BlogPage/ShareSection.astro";
 import HomeSection from "../components/HomePage/HomeSection.astro";
+import CommentSection from "../components/BlogPage/CommentSection.jsx";
 
 const { slug } = Astro.params;
 const blogObj = Blogs.find((i) => i.slug == slug);
@@ -47,4 +48,5 @@ const creatorLink = "/creator/" + author;
   <CreatorSection creatorObj={creatorObj} />
   <ShareSection />
   <HomeSection sectionName={categoryList[0]} customHeading="Related Posts"/>
+  <CommentSection slug={slug} client:load/>
 </Layout>
