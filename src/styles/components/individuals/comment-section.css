@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+@config '../../../../tailwind.config.js';
+
+/*Comments Section */
+.bp-comment-section{
+    @apply border-t-1 border-[gray] my-10 py-5 flex flex-col w-full;
+}
+
+.comments-list{
+    @apply my-10 flex flex-col gap-3;
+}
+
+.add-comment-section{
+    @apply border-y-1 border-[gray] p-5 flex flex-col items-center my-10 py-10 gap-5;
+}
+
+.acs-head{
+    @apply font-medium text-3xl no-underline;
+}
+
+.acs-form{
+    @apply z-0 w-full flex flex-col gap-2;
+}
+
+.acs-label{
+    @apply text-2xl font-medium underline;
+}
+
+.invalid{
+    @apply text-[red];
+}
+
+.name-email-sec{
+    @apply flex gap-5 w-full;
+}
+
+.acs-input{
+    @apply outline-2 w-[100%] p-3 h-10 text-lg font-medium pl-3;
+}
+
+.comment-input{
+    @apply w-full h-auto min-h-[150px] max-h-[600px] py-2;
+}
+
+.comment-actions{
+    @apply w-full flex items-center justify-center py-5 gap-5;
+}
+
+.ca-btn{
+    @apply flex justify-center items-center w-40 h-12 rounded-2xl cursor-pointer text-lg font-medium border-3 border-[var(--light-dd)] bg-[var(--light-dd)] text-white;
+}
+
+/*Comment Iten */
+.comment-item{
+    @apply flex flex-col p-5 bg-neutral-50 dark:bg-transparent rounded-2xl;
+}
+
+.ci-header{
+    @apply flex items-center gap-2 mb-1;
+}
+
+.ci-name{
+    @apply text-lg font-medium;
+}
+
+.comment-item p{
+    @apply text-lg font-normal;
+}
+
+.ci-actions{
+    @apply mt-2 mb-0 gap-3;
+}
+
+.ci-btn{
+    @apply flex gap-2 items-center cursor-pointer;
+}
+
+
+/*replies list*/
+.replies-list{
+    @apply my-5 w-full bg-amber-50 h-10;
+}
