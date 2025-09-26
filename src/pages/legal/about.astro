@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { AboutParas, termsLi, dmcaLi } from "../../config/About/config";
+import "../../styles/pages/BlogPage/creator-section.css";
+import "../../styles/pages/About/about.css";
+---
+
+<Layout title="About Anime Astra" forPage="about">
+  <div class="about-page">
+    <p>Last Updated : 26-09-2025</p>
+    <section class="about-sect">
+      <h1 class="about-head">About</h1>
+      <p>
+        {AboutParas[0]}
+      </p>
+    </section>
+    <section class="about-sect">
+      <h1 class="about-head">Terms of Service</h1>
+      <p class="terms-p">
+        {AboutParas[1]}
+      </p>
+      <ol>
+        {termsLi.map((obj) => (
+            <li>
+                {obj}
+            </li>
+        ))}
+      </ol>
+    </section>
+    <section class="about-sect">
+      <h1 class="about-head">Privacy Policies</h1>
+      <p>
+        {AboutParas[2]}
+      </p>
+    </section>
+    <section class="about-sect">
+      <h1 class="about-head">DMCA Notice</h1>
+      <p>
+        {AboutParas[3]}
+      </p>
+      <ol class="my-5">
+        {dmcaLi.map((obj) => (
+            <li>
+                {obj}
+            </li>
+        ))}
+      </ol>
+      <p class="self-start">We will respond promptly to valid requests and remove infringing content as required by law.</p>
+    </section>
+  </div>
+</Layout>

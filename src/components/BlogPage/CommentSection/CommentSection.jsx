@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
-import { addComment, getComments } from "../../DbFunctions/comments";
-import Loader from "../Loader/Loader";
-import { Icon } from "../../icons/icons";
-import '../../styles/components/individuals/comment-section.css';
-import InputForm from "./CommentSection/inputForm";
+import { addComment, getComments } from "../../../DbFunctions/comments";
+import Loader from "../../Loader/Loader";
+import '../../../styles/components/individuals/comment-section.css';
+import InputForm from "./inputForm";
 //libs for relative time
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import CommentItem from "./CommentSection/CommentItem";
+import CommentItem from "./CommentItem";
 dayjs.extend(relativeTime);
 
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+function isValidValue(value){
+  return value !== "" && value.length > 3;
 }
 
 const containsHTML = (str) => /<\/?[a-z][\s\S]*>/i.test(str);
@@ -88,11 +91,10 @@ export default function CommentSection({ slug }) {
   }
 
   async function submitComment() {
-    for (const i in valid) {
-      if (valid[i] == false) {
-        return;
-      }
+    if (!isValidValue(name) && !isValidValue(comment) && !isValidEmail(email)){
+      return;
     }
+    // if (!valid.name || !valid.email || !valid.comment) return;
     setSubmitting(true);
     const commentObject = {
       postSlug: slug,
@@ -113,7 +115,7 @@ export default function CommentSection({ slug }) {
   }, [name, comment, email]); //name, comment and email validation
 
   return (
-    <section className="bp-comment-section">
+    <section id="comments" className="bp-comment-section">
       <header className="hs-heading cs-head">Comments</header>
       <ul className="comments-list">
         {comments.map((obj, idx) => (

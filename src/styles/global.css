@@ -14,6 +14,8 @@
     --dark-h-dd: #E76E45;
     --light-third: #008080;
     --dark-third: #007BA7;
+    --light-link: #0000ff;
+    --dark-link: #4ea1ff;
 }
 
 body{
@@ -29,13 +31,25 @@ svg{
 }
 
 .mb-child{
-    @apply flex flex-col self-center w-full max-w-[1300px] min-h-[1000px];
+    @apply flex flex-col self-center w-full max-w-[1300px] min-h-[100vh];
 }
 
 .mbc-blog-page{
     @apply max-w-[1000px];
 }
 
+.mbc-about-page{
+    @apply max-w-[1000px];
+}
+
 .hov-ul:hover{
     @apply underline;
+}
+
+.hov-no-ul:hover{
+    @apply no-underline;
+}
+
+.link{
+    @apply text-[var(--light-link)] dark:text-[var(--dark-link)];
 }

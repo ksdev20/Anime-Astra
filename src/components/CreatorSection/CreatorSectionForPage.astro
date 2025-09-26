@@ -1,0 +1,25 @@
+---
+import '../../styles/pages/BlogPage/creator-section.css';
+import { Icon } from "../../icons/icons";
+
+const { obj } = Astro.props;
+const { name, about, socialMedia, createdAt } = obj ?? {};
+---
+
+<section class="creator-section-fp">
+  <span class="csp-head">About Creator</span>
+  <h2 class="cs-name csp-name">{name}</h2>
+  <span class="cs-created">Created : {createdAt}</span>
+  <p class="cs-about csp-about">{about}</p>
+  <ul class="flex items-center gap-2 mt-5">
+    {
+      socialMedia?.map((obj: any) => (
+        <li>
+          <a href={obj.link}>
+            <Icon name={obj.svg} size={30} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

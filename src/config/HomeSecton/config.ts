@@ -5,7 +5,9 @@ function getCategoryList(category : string){
 }
 
 export const HomeSections = [
+    {name: 'All', list: Blogs, type: 'date'},
     {name: 'Latest', list: Blogs.filter(i => i.date > '18/9/25'), type: 'date'},
+    {name: 'Creator', list: Blogs, type: 'date'},
     {name: 'Trending', list: [], type: 'popularity'},
     {name: 'Action', list: getCategoryList('Action'), type: 'category'},
     {name: 'Comedy', list: getCategoryList('Comedy'), type: 'category'},

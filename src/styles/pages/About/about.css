@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@config '../../../../tailwind.config.js';
+
+.about-page{
+    @apply flex flex-col gap-10 items-start;
+}
+
+.about-sect{
+    @apply flex flex-col items-start mt-0;
+}
+
+.about-head{
+    font-family: sans-serif;
+    @apply text-4xl font-semibold self-start mb-3;
+}
+
+.about-page p{
+    font-family: sans-serif;
+    @apply text-lg font-normal text-left leading-8 tracking-wide;
+}
+
+.terms-p{
+    @apply text-left self-start;
+}
+
+.about-page li{
+    font-family: sans-serif;
+    @apply text-lg font-normal text-left py-2;
+}
+
+.about-page ol{
+    @apply list-decimal ml-5;
+}

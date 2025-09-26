@@ -1,67 +1,143 @@
 @import 'tailwindcss';
 @config '../../../../tailwind.config.js';
 
-.navbar{
-    @apply flex items-center justify-around px-3 py-4 bg-transparent border-b-2;
+.navbar {
+    @apply flex items-center justify-between px-5 py-4 bg-transparent border-b-2;
 }
 
-.nav-menu-btn{
-    @apply cursor-pointer sm:hidden;
+.nav-menu-btn {
+    @apply cursor-pointer mr-4 sm:hidden;
 }
 
-.site-logo{
+.site-logo {
     font-family: 'Montserrat';
     @apply text-2xl font-semibold tracking-wide cursor-pointer;
 }
 
-.nav-middle{
-    @apply max-w-[40%] /*hidden*/ flex items-center flex-wrap gap-4 /*sm:flex*/;
+.hide-for-sb {
+    @apply hidden sm:flex;
 }
 
-.nav-middle.hidden{
+.nav-middle {
+    @apply hidden items-center flex-wrap gap-4 sm:flex;
+}
+
+.nav-middle.hidden {
     @apply hidden;
 }
 
-.nm-btn{
+.nm-btn {
     @apply text-base font-medium underline cursor-pointer;
 }
 
-.dd-btn{
+.dd-btn {
     @apply flex items-center p-1;
 }
 
-.nm-btn:hover{
+.nm-btn:hover {
     @apply no-underline;
 }
 
-.nav-right{
+.nav-right {
     @apply flex gap-4;
 }
 
-.theme-btn{
+.theme-btn {
     @apply cursor-pointer;
 }
 
-.search-btn{
+.search-btn {
     @apply cursor-pointer;
 }
 
-.search-bar{
-    @apply outline-2 p-1 text-base
+.search-bar {
+    @apply outline-2 p-1 text-base w-[250px];
 }
 
-.nm-hover-dd{
+.nm-hover-dd {
     @apply relative z-[50];
 }
 
-.dd-main{
-    @apply bg-[var(--light-dd)] dark:bg-[var(--dark-dd)] absolute w-[200px] py-2;
+.dd-main {
+    @apply bg-[var(--light-dd)] dark:bg-[var(--dark-dd)] absolute w-[200px] py-2 overflow-hidden;
 }
 
-.dd-btn{
+.dd-btn {
     @apply flex items-center w-full text-white dark:text-black text-sm pl-2;
 }
 
-.dd-btn:hover{
+.dd-btn:hover {
     @apply bg-[var(--light-h-dd)] dark:bg-[var(--dark-h-dd)];
+}
+
+/* @media (max-width: 640px) {
+    .nav-middle {
+        @apply fixed z-[60] bg-[var(--light-third)] flex flex-col w-[100vw] py-3 top-[66px] left-0 text-white dark:text-white;
+    }
+
+    .nm-btn.h-dd-btn{
+        @apply w-fit block justify-normal;
+    }
+
+    .nm-btn{
+        @apply w-full flex justify-center hover:bg-[var(--dark-third)];
+    }
+
+    .nm-hover-dd {
+        @apply static w-full border-t-1;
+    }
+
+    .dd-main {
+        @apply static flex-col w-[100vw] bg-[var(--light-third)] dark:bg-[var(--light-third)] items-center;
+    }
+    .dd-btn{
+        @apply text-base w-[100vw] justify-center hover:bg-[var(--dark-third)] dark:text-white;
+    }
+} */
+
+/*show / hide animations*/
+
+:root {
+    --anim-t: 0.2s;
+}
+
+.show {
+    display: flex !important;
+    transition: display var(--anim-t) allow-discrete;
+}
+
+.hid {
+    display: none !important;
+    transition: display var(--anim-t) allow-discrete;
+}
+
+.hid .dd-main,
+.hid .search-bar {
+    animation: vanish var(--anim-t) !important;
+}
+
+.show .dd-main,
+.show .search-bar {
+    animation: appear var(--anim-t) !important;
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vanish {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }

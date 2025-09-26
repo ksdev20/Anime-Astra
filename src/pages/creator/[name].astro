@@ -1,0 +1,10 @@
+---
+import { Creators }from '../../data/Creators';
+import CreatorSection from "../../components/CreatorSection/CreatorSectionForPage.astro";
+import Layout from "../../layouts/Layout.astro";
+import HomeSection from '../../components/HomePage/HomeSection.astro';
+---
+<Layout>
+    <CreatorSection obj={Creators[0]}/>
+    <HomeSection sectionName="Creator" customHeading="Creator Posts" />
+</Layout>

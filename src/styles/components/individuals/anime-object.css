@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+@config '../../../../tailwind.config.js';
+
+.anime-object{
+    @apply border-y-1 border-[gray] py-8 flex flex-col;
+}
+
+.ao-title{
+    font-family: 'Montserrat' sans-serif;
+    @apply text-3xl font-bold mb-5;
+}
+
+.ao-img{
+    @apply object-cover w-full max-w-[600px] h-auto self-center my-5 rounded-2xl;
+}
+
+.imp-info{
+    @apply relative z-0 border-2 rounded-2xl px-5 py-5 my-5 flex flex-col flex-wrap gap-2 w-fit self-center items-center justify-center; 
+}
+
+.imp-info div{
+    @apply flex items-center text-lg font-medium gap-1;
+}
+
+/* .imp-info div:not(:last-child)::after{
+    content: "•";
+    padding-left: 4px;
+} */
+
+.w-btn-anikawa{
+    @apply w-fit self-center bg-[#8c52ff] dark:bg-[#8c52ff] my-5; 
+}
+
+.ao-note{
+    @apply text-base font-medium;
+}
+
+.ao-main{
+    @apply flex flex-col w-full gap-10;
+}
+
+.aom-head{
+    @apply relative flex gap-1 text-lg font-medium w-fit pl-3 mb-5;
+}
+
+.aom-head::before{
+    content: "";
+    @apply absolute left-0 w-1 h-full bg-[var(--light-third)] dark:bg-[var(--dark-third)] rounded-full mr-2;
+}
+
+.aom-content{
+    /* font-family: 'Libre Franklin'; */
+    @apply pl-10 text-lg font-normal antialiased text-left leading-8 tracking-wide;
+}
+
+/* .imdb-data a{
+    @apply decoration-1 text-base;
+} */
+
+/* .imdb-mal{
+    @apply hidden gap-4;
+} */
+
+.streaming-dd{
+    @apply flex items-center gap-2;
+}
+
+.streaming-dd a:not(:last-child)::after{
+    content: "•";
+    @apply pl-2 text-black;
+}

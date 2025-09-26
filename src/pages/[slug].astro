@@ -9,7 +9,8 @@ import NextPrevPosts from "../components/BlogPage/NextPrevPosts.astro";
 import CreatorSection from "../components/BlogPage/CreatorSection.astro";
 import ShareSection from "../components/BlogPage/ShareSection.astro";
 import HomeSection from "../components/HomePage/HomeSection.astro";
-import CommentSection from "../components/BlogPage/CommentSection.jsx";
+import CommentSection from "../components/BlogPage/CommentSection/CommentSection.jsx";
+import AnimeObject from "../components/AnimeObject/AnimeObject.astro";
 
 const { slug } = Astro.params;
 const blogObj = Blogs.find((i) => i.slug == slug);
@@ -21,12 +22,22 @@ if (!slug || !blogObj) {
     },
   });
 }
-const { title, author, date, readMinutes, categoryList, img, toc } = blogObj;
+const {
+  title,
+  author,
+  date,
+  readMinutes,
+  categoryList,
+  img,
+  toc,
+  animeObjects,
+} = blogObj;
+if (!animeObjects) return null;
 const creatorObj = Creators.find((i) => i.name == author);
 const creatorLink = "/creator/" + author;
 ---
 
-<Layout forBlogPage={true}>
+<Layout forPage="blog">
   <header class="bp-header">
     <h1 class="bp-h1">{title}</h1>
     <ul class="bph-details">
@@ -44,9 +55,10 @@ const creatorLink = "/creator/" + author;
     fetchpriority="high"
   />
   <TocSection toc={toc} />
+  {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} />)}
   <NextPrevPosts />
   <CreatorSection creatorObj={creatorObj} />
   <ShareSection />
-  <HomeSection sectionName={categoryList[0]} customHeading="Related Posts"/>
-  <CommentSection slug={slug} client:load/>
+  <HomeSection sectionName={categoryList[0]} customHeading="Related Posts" />
+  <CommentSection slug={slug} client:load />
 </Layout>
