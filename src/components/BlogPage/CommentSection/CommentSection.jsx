@@ -14,11 +14,11 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-function isValidValue(value){
+export function isValidValue(value){
   return value !== "" && value.length > 3;
 }
 
-const containsHTML = (str) => /<\/?[a-z][\s\S]*>/i.test(str);
+export const containsHTML = (str) => /<\/?[a-z][\s\S]*>/i.test(str);
 
 export default function CommentSection({ slug }) {
   const [comments, setComments] = useState([]);
@@ -102,30 +102,33 @@ export default function CommentSection({ slug }) {
   }, [name, comment, email]); //name, comment and email validation
 
   return (
-    <section id="comments" className="bp-comment-section">
-      <header className="hs-heading cs-head">Comments</header>
-      <ul className="comments-list">
-        {comments.map((obj, idx) => (
-          <CommentItem key={idx} obj={obj} ip={ip} client:load />
-        ))}
-      </ul >
+    <>
       <section className="add-comment-section">
-        <header className="acs-head">Add a Comment</header>
-        <div className="name-email-sec">
-          {addCommentConfig.map((obj, idx) => {
-            if (idx == 2) return null;//not wanna put comment form in a flex-row
-            return (
-              <InputForm key={idx} obj={obj} />
-            )
-          })}
-        </div>
-        <InputForm obj={addCommentConfig[2]} />
-        <section className="comment-actions">
-          <button className="ca-btn" onClick={() => submitComment()}>{submitting ?
-            <Loader />
-            : 'Submit'}</button>
+          <header className="acs-head">Add a Comment</header>
+          <span>Tip : Fill Name and Email to Reply to Comments</span>
+          <div className="name-email-sec">
+            {addCommentConfig.map((obj, idx) => {
+              if (idx == 2) return null;//not wanna put comment form in a flex-row
+              return (
+                <InputForm key={idx} obj={obj} />
+              )
+            })}
+          </div>
+          <InputForm obj={addCommentConfig[2]} />
+          <section className="comment-actions">
+            <button className="ca-btn" onClick={() => submitComment()}>{submitting ?
+              <Loader />
+              : 'Submit'}</button>
+          </section>
         </section>
-      </section>
-    </section >
+      <section id="comments" className="bp-comment-section">
+        <header className="hs-heading cs-head">Comments</header>
+        <ul className="comments-list">
+          {comments.map((obj, idx) => (
+            <CommentItem key={idx} obj={obj} ip={ip} name={name} email={email} client:load />
+          ))}
+        </ul>
+      </section >
+    </>
   );
 }

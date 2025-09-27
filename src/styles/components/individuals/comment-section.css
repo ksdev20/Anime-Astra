@@ -3,11 +3,11 @@
 
 /*Comments Section */
 .bp-comment-section{
-    @apply border-t-1 border-[gray] my-10 py-5 flex flex-col w-full;
+    @apply border-t-0 border-[gray] py-5 flex flex-col w-full;
 }
 
 .comments-list{
-    @apply my-10 flex flex-col gap-3;
+    @apply my-5 flex flex-col gap-3;
 }
 
 .add-comment-section{
@@ -43,11 +43,11 @@
 }
 
 .comment-actions{
-    @apply w-full flex items-center justify-center py-5 gap-5;
+    @apply w-full flex-center py-5 gap-5;
 }
 
 .ca-btn{
-    @apply flex justify-center items-center w-40 h-12 rounded-2xl cursor-pointer text-lg font-medium border-3 border-[var(--light-dd)] bg-[var(--light-dd)] text-white;
+    @apply flex justify-center items-center w-40 h-12 rounded-2xl cursor-pointer text-lg font-medium bg-[var(--light-dd)] text-white;
 }
 
 /*Comment Item*/
@@ -78,5 +78,27 @@
 
 /*replies list*/
 .replies-list{
-    @apply my-5 w-full bg-amber-50 h-10;
+    @apply my-5 w-full h-10 pl-10;
+}
+
+
+.reply-write-sec{
+    @apply flex gap-2 pl-15 pt-10;
+}
+
+.reply-input{
+    @apply mt-5 outline-2 outline-[gray] w-full sm:w-[50%] p-1 max-h-[300px];
+}
+
+/* 
+.send-btn{
+    @apply right-0 bottom-0;
+} */
+
+.send-btn{
+    @apply bg-[var(--light-third)] dark:bg-[var(--dark-third)] p-1 rounded-full flex-center w-fit h-fit self-baseline-last cp;
+}
+
+.send-btn svg{
+    fill: white;
 }

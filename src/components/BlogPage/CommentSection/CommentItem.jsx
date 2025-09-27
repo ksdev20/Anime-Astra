@@ -1,17 +1,22 @@
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { Icon } from '../../../icons/icons';
-import { toggleLike } from '../../../DbFunctions/comments';
-import {  useState } from 'react';
+import { addReply, toggleLike } from '../../../DbFunctions/comments';
+import { useState } from 'react';
+import Loader from '../../Loader/Loader';
+import { containsHTML, isValidValue } from './CommentSection';
 dayjs.extend(relativeTime);
 
-export default function CommentItem({ obj, mainIsReply = false, ip }) {
+{/*  */ }
+
+export default function CommentItem({ obj, mainIsReply = false, ip, nameG, emailG }) {
     const [liked, setLiked] = useState(obj.likes[ip]);
     const { _id, name, comment, createdAt, replies = [] } = obj;
     const likeCount = obj.likes ? Object.keys(obj.likes).length : 0;
     const [likes, setLikes] = useState(likeCount);
     const relativeDate = dayjs(createdAt).fromNow();
-
+    const [repStrip, setRepStrip] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     return (
         <li>
@@ -41,7 +46,7 @@ export default function CommentItem({ obj, mainIsReply = false, ip }) {
                     }}>
                         {!liked ? <Icon name="like" size={20} /> : <Icon name="like-filled" size={20} />}{likes}
                     </button>
-                    <button className="ci-btn">
+                    <button className="ci-btn" onClick={() => setRepStrip(!repStrip)}>
                         <Icon name="reply" size={20} />
                     </button>
                     <button className="ci-btn">
@@ -50,18 +55,38 @@ export default function CommentItem({ obj, mainIsReply = false, ip }) {
                 </section>
             </section>
             {
-                replies.length !== 0 && (
+                !mainIsReply && replies.length !== 0 && (
                     <ul className="comments-list replies-list">
-                        {replies.map((obj) => {
+                        {replies.map((obj, idx) => {
                             return (
-                                <li>
-                                    <CommentItem obj={obj} mainIsReply={true} />
-                                </li>
+                                <CommentItem key={idx} obj={obj} mainIsReply={true} />
                             )
                         })}
                     </ul>
                 )
             }
+            {!mainIsReply && (<section className='reply-write-sec'>
+                <textarea className="reply-input" placeholder='Type your reply' />
+                <button className='send-btn' onClick={(e) => {
+                    const replyEl = e.currentTarget.previousElementSibling;
+                    const reply = replyEl.value;
+                    if (containsHTML(reply) || !isValidValue(reply)) {
+                        replyEl.value = "Invalid Reply !";
+                        return;
+                    }
+                    const replyObj = {
+                        name: "Kuchi",
+                        email: emailG,
+                        reply: reply
+                    };
+                    setLoading(true);
+                    addReply(_id, replyObj).then(data => {
+                        setLoading(false);
+                        const msg = data ? "Reply Added ✅" : "Failed to add Reply ❌";
+                        console.log(msg);
+                    });
+                }}>{loading ? <Loader /> : <Icon name='send-filled' className={"send-icon"} />}</button>
+            </section>)}
         </li>
     );
 }
