@@ -125,7 +125,7 @@ export default function CommentSection({ slug }) {
         <header className="hs-heading cs-head">Comments</header>
         <ul className="comments-list">
           {comments.map((obj, idx) => (
-            <CommentItem key={idx} obj={obj} ip={ip} name={name} email={email} client:load />
+            <CommentItem key={idx} obj={obj} ip={ip} nameG={name} emailG={email} client:load />
           ))}
         </ul>
       </section >

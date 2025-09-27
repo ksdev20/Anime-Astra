@@ -15,7 +15,7 @@ export default function CommentItem({ obj, mainIsReply = false, ip, nameG, email
     const likeCount = obj.likes ? Object.keys(obj.likes).length : 0;
     const [likes, setLikes] = useState(likeCount);
     const relativeDate = dayjs(createdAt).fromNow();
-    const [repStrip, setRepStrip] = useState(false);
+    const [showReplies, setShowReplies] = useState(false);
     const [loading, setLoading] = useState(false);
 
     return (
@@ -46,7 +46,7 @@ export default function CommentItem({ obj, mainIsReply = false, ip, nameG, email
                     }}>
                         {!liked ? <Icon name="like" size={20} /> : <Icon name="like-filled" size={20} />}{likes}
                     </button>
-                    <button className="ci-btn" onClick={() => setRepStrip(!repStrip)}>
+                    <button className="ci-btn" onClick={() => setShowReplies(!showReplies)}>
                         <Icon name="reply" size={20} />
                     </button>
                     <button className="ci-btn">
@@ -55,7 +55,7 @@ export default function CommentItem({ obj, mainIsReply = false, ip, nameG, email
                 </section>
             </section>
             {
-                !mainIsReply && replies.length !== 0 && (
+                !mainIsReply && showReplies && replies.length !== 0 && (
                     <ul className="comments-list replies-list">
                         {replies.map((obj, idx) => {
                             return (
@@ -65,7 +65,7 @@ export default function CommentItem({ obj, mainIsReply = false, ip, nameG, email
                     </ul>
                 )
             }
-            {!mainIsReply && (<section className='reply-write-sec'>
+            {!mainIsReply && showReplies && (<section className='reply-write-sec'>
                 <textarea className="reply-input" placeholder='Type your reply' />
                 <button className='send-btn' onClick={(e) => {
                     const replyEl = e.currentTarget.previousElementSibling;
@@ -75,7 +75,7 @@ export default function CommentItem({ obj, mainIsReply = false, ip, nameG, email
                         return;
                     }
                     const replyObj = {
-                        name: "Kuchi",
+                        name: nameG,
                         email: emailG,
                         reply: reply
                     };
