@@ -2,16 +2,25 @@
 @config '../../../../tailwind.config.js';
 
 .navbar {
-    @apply flex items-center justify-between px-5 py-4 bg-transparent border-b-2;
+    @apply relative flex items-center justify-between px-5 py-5 bg-transparent border-b-2 md:px-10 h-max;
 }
 
 .nav-menu-btn {
     @apply cursor-pointer mr-4 sm:hidden;
 }
 
+.nav-mob-overlay {
+    @apply absolute z-[50] bg-[var(--light-third)] top-[100%] left-0 flex-col py-3 w-[100vw];
+}
+
+.nmo-btn {
+    @apply flex justify-center items-center h-10 hover:bg-[var(--light-h-third)] text-white font-medium;
+}
+
 .site-logo {
-    font-family: 'Montserrat';
-    @apply text-2xl font-semibold tracking-wide cursor-pointer;
+    font-family: 'Montserrat' sans-serif;
+    /* font-family: 'Montserrat'; */
+    @apply text-3xl font-semibold tracking-wide cursor-pointer;
 }
 
 .hide-for-sb {
@@ -19,7 +28,7 @@
 }
 
 .nav-middle {
-    @apply hidden items-center flex-wrap gap-4 sm:flex;
+    @apply hidden items-center justify-center flex-wrap gap-4 sm:flex;
 }
 
 .nav-middle.hidden {
@@ -27,7 +36,7 @@
 }
 
 .nm-btn {
-    @apply text-base font-medium underline cursor-pointer;
+    @apply text-lg font-medium underline cursor-pointer;
 }
 
 .dd-btn {
@@ -39,7 +48,7 @@
 }
 
 .nav-right {
-    @apply flex gap-4;
+    @apply flex items-center justify-center gap-4;
 }
 
 .theme-btn {
@@ -51,7 +60,7 @@
 }
 
 .search-bar {
-    @apply outline-2 p-1 text-base w-[250px];
+    @apply outline-2 p-1 text-base w-[250px] h-fit;
 }
 
 .nm-hover-dd {
@@ -112,12 +121,14 @@
 }
 
 .hid .dd-main,
-.hid .search-bar {
+.hid .search-bar,
+.hidden .nav-mob-overlay {
     animation: vanish var(--anim-t) !important;
 }
 
 .show .dd-main,
-.show .search-bar {
+.show .search-bar,
+.show .nav-mob-overlay {
     animation: appear var(--anim-t) !important;
 }
 

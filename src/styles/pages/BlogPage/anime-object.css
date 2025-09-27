@@ -7,7 +7,7 @@
 
 .ao-title{
     font-family: 'Montserrat' sans-serif;
-    @apply text-3xl font-bold mb-5;
+    @apply text-2xl sm:text-3xl font-bold mb-0 sm:mb-5;
 }
 
 .ao-img{
@@ -19,7 +19,7 @@
 }
 
 .imp-info div{
-    @apply flex items-center text-lg font-medium gap-1;
+    @apply flex items-center text-base sm:text-lg font-medium gap-1 text-left;
 }
 
 /* .imp-info div:not(:last-child)::after{
@@ -36,11 +36,11 @@
 }
 
 .ao-main{
-    @apply flex flex-col w-full gap-10;
+    @apply flex flex-col w-full gap-5 sm:gap-10;
 }
 
 .aom-head{
-    @apply relative flex gap-1 text-lg font-medium w-fit pl-3 mb-5;
+    @apply relative flex gap-1 text-base sm:text-lg font-medium w-fit pl-3 mb-5;
 }
 
 .aom-head::before{
@@ -50,7 +50,7 @@
 
 .aom-content{
     /* font-family: 'Libre Franklin'; */
-    @apply pl-10 text-lg font-normal antialiased text-left leading-8 tracking-wide;
+    @apply pl-10 text-base sm:text-lg font-normal antialiased text-left leading-8 tracking-wide;
 }
 
 /* .imdb-data a{

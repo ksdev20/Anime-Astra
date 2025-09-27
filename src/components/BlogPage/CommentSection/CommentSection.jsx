@@ -40,19 +40,6 @@ export default function CommentSection({ slug }) {
     setComment(el.value);
   }
 
-  const htmlCheckItems = [
-    {
-      f: 'name',
-      item: name
-    }, {
-      f: 'email',
-      item: email
-    }, {
-      f: 'comment',
-      item: comment
-    }
-  ];
-
   const addCommentConfig = [
     {
       valid: valid.name,

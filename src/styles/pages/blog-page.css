@@ -9,11 +9,11 @@
 
 .bp-h1{
     font-family: 'Montserrat' sans-serif;
-    @apply text-4xl font-bold mt-10;
+    @apply text-3xl sm:text-4xl font-bold mt-10;
 }
 
 .bph-details{
-    @apply flex items-center gap-3 text-lg font-medium mt-3;
+    @apply flex items-center gap-3 text-base sm:text-lg font-medium mt-3;
 }
 
 .bp-main-img{
@@ -22,7 +22,7 @@
 
 /*Table Of Contents*/
 .toc-section{
-    @apply flex flex-col relative z-0 my-10 w-70 h-fit border-3 rounded-2xl p-5;
+    @apply flex flex-col relative z-0 my-10 px-10 py-5 w-fit h-fit border-3 rounded-2xl;
 }
 
 .toc-text{
@@ -36,6 +36,10 @@
 /*share section*/
 .share-section{
     @apply border-y-1 border-y-[gray] py-5 my-5 flex items-center justify-end gap-4;
+}
+
+.ss-text{
+    @apply text-lg sm:text-2xl font-medium;
 }
 
 .share-list{
@@ -60,5 +64,9 @@
 }
 
 .npp-text{
-    @apply text-base font-medium;
+    @apply text-sm sm:text-base font-medium;
+}
+
+.mbc-blog-page .hs-heading{
+    @apply text-2xl sm:text-4xl;
 }

@@ -46,3 +46,12 @@
 .bc-bottom{
     @apply flex items-center gap-1 pt-2 pb-1 flex-wrap text-base;
 }
+
+@media (max-width: 640px){
+    .hs-list{
+        @apply flex-col gap-5;
+    }
+    .blog-card{
+        @apply border-b-2 py-5 border-[gray] w-full h-fit;
+    }
+}

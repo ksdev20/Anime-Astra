@@ -1,5 +1,5 @@
 ---
-import "../../styles/components/individuals/anime-object.css";
+import "../../styles/pages/BlogPage/anime-object.css";
 const { animeObj, i } = Astro.props;
 if (!animeObj) return null;
 const {
@@ -21,11 +21,11 @@ const { seasons, episodes } = seasonMetrics;
 const number = i + 1;
 
 const items: Record<string, any> = [
-  { "Release Year : ": releaseYear },
-  { "Length : ": `${seasons} Seasons, ${episodes} Episodes` },
-  { "Genres : ": genres.join(", ") },
-  { "Imdb Pg : ": pg[0].imdb + "(You can watch with family)" },
-  { "Dub Languages : ": languages.dub.join(", ") },
+  { "Release Year: ": releaseYear },
+  { "Length: ": `${seasons} Seasons, ${episodes} Episodes` },
+  { "Genres: ": genres.join(", ") },
+  { "Imdb Pg: ": pg[0].imdb + "(You can watch with family)" },
+  { "Dubs: ": languages.dub.join(", ") },
 ];
 ---
 
@@ -54,7 +54,7 @@ const items: Record<string, any> = [
       </div>
     </div>
     <div>
-      <dt>Streaming :</dt>
+      <dt>Streaming:</dt>
       <dd class="streaming-dd link">
         {
           streaming.map((obj: any) => (
