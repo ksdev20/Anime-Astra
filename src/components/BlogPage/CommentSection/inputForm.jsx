@@ -1,5 +1,5 @@
 export default function InputForm({ obj }) {
-  const { valid, label, value, onChange } = obj;
+  const { valid, label, value, onChange, invalidMsg } = obj;
   const isComment = label == 'Comment';
   const isEmail = label == 'Email';
   return (
@@ -9,7 +9,7 @@ export default function InputForm({ obj }) {
           {label}
         </label>
         {!isEmail && (<div className="text-2xl">*</div>)}
-        <span className={"text-base"}>{!valid ? `Invalid ${label}` : ""}</span>
+        <span className={"text-base"}>{!valid ? invalidMsg : ""}</span>
       </div>
       {!isComment ? (
         <input

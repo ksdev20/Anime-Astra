@@ -7,7 +7,7 @@ import InputForm from "./inputForm";
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import CommentItem from "./CommentItem";
-import { isValidEmail, containsHTML, isValidValue } from "./validation";
+import { isValidEmail, containsHTML, isValidValue, validate } from "./validation";
 dayjs.extend(relativeTime);
 
 export default function CommentSection({ slug }) {
@@ -38,6 +38,7 @@ export default function CommentSection({ slug }) {
       onChange: (e) => {
         setName(e.target.value);
       },
+      invalidMsg: name == '' ? 'Name Required' : 'Invalid Name'
     },
     {
       valid: valid.email,
@@ -45,13 +46,15 @@ export default function CommentSection({ slug }) {
       value: email,
       onChange: (e) => {
         setEmail(e.target.value);
-      }
+      },
+      invalidMsg: 'Invalid Email, Empty this field either'
     },
     {
       valid: valid.comment,
       label: 'Comment',
       value: comment,
-      onChange: handleComChange
+      onChange: handleComChange,
+      invalidMsg: comment == '' ? 'Comment Required' : 'Invalid Comment'
     },
   ];
 
@@ -68,12 +71,12 @@ export default function CommentSection({ slug }) {
   }
 
   async function submitComment() {
-    if (!isValidValue(name) && !isValidValue(comment)) {
+    if (!valid.name || !valid.comment || !valid.email) {
       return;
     }
-    if (email !== '' && !isValidEmail(email)) {
-      return;
-    }
+    // if (email !== '' && !isValidEmail(email)) {
+    //   return;
+    // }
     // if (!valid.name || !valid.email || !valid.comment) return;
     setSubmitting(true);
     const commentObject = {
@@ -91,7 +94,7 @@ export default function CommentSection({ slug }) {
   }
 
   useEffect(() => {
-    setValid({ name: !containsHTML(name), comment: !containsHTML(comment), email: !containsHTML(email) });
+    setValid({ name: validate('', name), comment: validate('', comment), email: validate('email', email) });
   }, [name, comment, email]); //name, comment and email validation
 
   return (
