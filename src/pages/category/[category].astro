@@ -1,15 +1,27 @@
 ---
+import BlogCard from "../../components/BlogCard/BlogCard";
+import { Blogs } from "../../data/Blogs";
+import Layout from "../../layouts/Layout.astro";
+
 export const prerender = false;
 const { category } = Astro.params;
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Category : {category}</h1>
-</body>
-</html>
+
+<Layout>
+  <div class="flex justify-center mt-3 sm:mt-5 mb-10">
+    <span class="border-2 p-3 rounded-3xl text-2xl font-medium"
+      >{category}
+    </span>
+  </div>
+  <ul class="hs-list">
+    {
+      Blogs?.filter((i) =>
+        i?.categoryList?.some((cat) => cat.toLowerCase() == category?.toLowerCase())
+      )?.map?.((obj) => (
+        <li>
+          <BlogCard BcObject={obj} />
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

@@ -52,7 +52,7 @@ export function Navbar() {
           <Icon name="menu" color="#000000" />
         </button>
         <a href="/" className={`site-logo ${showSearch ? "hide-for-sb" : ""}`}>
-          Anime Astra
+          <img src="/ico6.webp" alt="Site Icon" className="site-icon"/>Anime Astra
         </a>
         <section className={`nav-middle ${showSearch ? "hidden" : ""}`}>
           <a href="/all-articles/" className="nm-btn">

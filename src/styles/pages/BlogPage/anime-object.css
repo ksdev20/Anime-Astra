@@ -15,7 +15,7 @@
 }
 
 .imp-info{
-    @apply relative z-0 border-2 rounded-2xl px-5 py-5 my-5 flex flex-col flex-wrap gap-2 w-fit self-center items-center justify-center; 
+    @apply relative z-0 border-2 rounded-2xl px-15 py-5 my-5 flex flex-col flex-wrap gap-2 w-fit self-center items-center justify-center; 
 }
 
 .imp-info div{

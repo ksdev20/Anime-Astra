@@ -1,5 +1,6 @@
 ---
 import "../../styles/pages/BlogPage/anime-object.css";
+import CategorySection from "../BlogCard/CategorySection";
 const { animeObj, i } = Astro.props;
 if (!animeObj) return null;
 const {
@@ -23,8 +24,8 @@ const number = i + 1;
 const items: Record<string, any> = [
   { "Release Year: ": releaseYear },
   { "Length: ": `${seasons} Seasons, ${episodes} Episodes` },
-  { "Genres: ": genres.join(", ") },
-  { "Imdb Pg: ": pg[0].imdb + "(You can watch with family)" },
+  // { "Genres: ": genres.join(", ") },
+  { "Imdb Pg: ": pg[0].imdb },
   { "Dubs: ": languages.dub.join(", ") },
 ];
 ---
@@ -45,6 +46,10 @@ const items: Record<string, any> = [
         );
       })
     }
+    <div class="flex items-center">
+      <dt>Genres:</dt>
+      <CategorySection categoryList={genres} />
+    </div>
     <div class="link">
       <div class="imdb-data link">
         <a href={ratings.imdb.link}>View on IMDB</a>

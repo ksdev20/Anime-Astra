@@ -1,14 +1,24 @@
 ---
 import { Icon } from "../../icons/icons";
+const { next, prev } = Astro.props;
+if (!prev && !next) return null;
 ---
 
 <section class="next-prev-posts">
-  <a href="/" class="npp-btn">
-    <Icon name="keyleft" />
-    <span class="npp-text">PREVIOUS POST</span>
-  </a>
-  <a href="/" class="npp-btn">
-    <span class="npp-text">NEXT POST</span>
-    <Icon name="keyright" />
-  </a>
+  {
+    prev && (
+      <a href={"/" + prev} class="npp-btn">
+        <Icon name="keyleft" />
+        <span class="npp-text">PREVIOUS POST</span>
+      </a>
+    )
+  }
+  {
+    next && (
+      <a href={"/" + next} class="npp-btn">
+        <span class="npp-text">NEXT POST</span>
+        <Icon name="keyright" />
+      </a>
+    )
+  }
 </section>

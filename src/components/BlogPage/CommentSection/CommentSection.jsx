@@ -7,18 +7,8 @@ import InputForm from "./inputForm";
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import CommentItem from "./CommentItem";
+import { isValidEmail, containsHTML, isValidValue } from "./validation";
 dayjs.extend(relativeTime);
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-export function isValidValue(value){
-  return value !== "" && value.length > 3;
-}
-
-export const containsHTML = (str) => /<\/?[a-z][\s\S]*>/i.test(str);
 
 export default function CommentSection({ slug }) {
   const [comments, setComments] = useState([]);
@@ -78,7 +68,10 @@ export default function CommentSection({ slug }) {
   }
 
   async function submitComment() {
-    if (!isValidValue(name) && !isValidValue(comment) && !isValidEmail(email)){
+    if (!isValidValue(name) && !isValidValue(comment)) {
+      return;
+    }
+    if (email !== '' && !isValidEmail(email)) {
       return;
     }
     // if (!valid.name || !valid.email || !valid.comment) return;
@@ -104,23 +97,23 @@ export default function CommentSection({ slug }) {
   return (
     <>
       <section className="add-comment-section">
-          <header className="acs-head">Add a Comment</header>
-          <span>Tip : Fill Name and Email to Reply to Comments</span>
-          <div className="name-email-sec">
-            {addCommentConfig.map((obj, idx) => {
-              if (idx == 2) return null;//not wanna put comment form in a flex-row
-              return (
-                <InputForm key={idx} obj={obj} />
-              )
-            })}
-          </div>
-          <InputForm obj={addCommentConfig[2]} />
-          <section className="comment-actions">
-            <button className="ca-btn" onClick={() => submitComment()}>{submitting ?
-              <Loader />
-              : 'Submit'}</button>
-          </section>
+        <header className="acs-head">Add a Comment</header>
+        <span>Tip : Fill Name* to reply to comments</span>
+        <div className="name-email-sec">
+          {addCommentConfig.map((obj, idx) => {
+            if (idx == 2) return null;//not wanna put comment form in a flex-row
+            return (
+              <InputForm key={idx} obj={obj} />
+            )
+          })}
+        </div>
+        <InputForm obj={addCommentConfig[2]} />
+        <section className="comment-actions">
+          <button className="ca-btn" onClick={() => submitComment()}>{submitting ?
+            <Loader />
+            : 'Submit'}</button>
         </section>
+      </section>
       <section id="comments" className="bp-comment-section">
         <header className="hs-heading cs-head">Comments</header>
         <ul className="comments-list">

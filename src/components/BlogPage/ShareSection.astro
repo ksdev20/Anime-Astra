@@ -1,19 +1,38 @@
 ---
 import { SocialItems } from "../../config/socialMedia/config";
 import { Icon } from "../../icons/icons";
+const { postSlug, postTitle, postUrl } = Astro.props;
 ---
 
 <section class="share-section">
   <span class="ss-text">Share</span>
   <ul class="share-list">
     {
-      SocialItems?.map((obj: any) => (
-        <li>
-          <a href={obj.link}>
-            <Icon name={obj.svg} size={30} />
-          </a>
-        </li>
-      ))
+      SocialItems?.map((obj: any) => {
+        let link = obj.link;
+        switch (obj.name) {
+          case "Facebook":
+            link += `?u=${postSlug}`;
+            break;
+          case "Twitter":
+            link += `?url=${postUrl}&text=${postTitle}`;
+            break;
+          case "WhatsApp":
+            const msg = encodeURIComponent(`${postTitle} ${postUrl}`);
+            link = `https://wa.me/?text=${msg}`;
+            break;
+          case "Reddit":
+            link += `submit?url=${postUrl}&title=${postTitle}`;
+            break;
+        }
+        return (
+          <li>
+            <a href={link} target="_blank">
+              <Icon name={obj.svg} size={30} />
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
 </section>

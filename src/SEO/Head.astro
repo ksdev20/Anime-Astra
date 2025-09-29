@@ -1,0 +1,89 @@
+---
+import { defaultHead } from "./default";
+
+const toDestruct = Astro.props.title ? Astro.props.head : defaultHead;
+
+const {
+  title,
+  description,
+  keywords,
+  url,
+  imageUrl,
+  author,
+  jsonLd,
+} = toDestruct;
+
+const isHomepage = Astro.url.pathname == "/";
+
+const fontImpUrl =
+  "https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap";
+---
+
+<head>
+  <title>{title}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content={author} />
+  <meta
+    name="robots"
+    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  />
+
+  <meta name="og:type" content="website" />
+  <meta name="og:url" content={url} />
+  <meta name="og:title" content={title} />
+  <meta name="og:description" content={description} />
+  <meta name="og:site_name" content="Anikawa" />
+  <meta
+    name="og:image"
+    content="https://anikawa.vercel.app/anikawa-og-img-pc.png"
+  />
+  <meta name="og:image:width" content="1200" />
+  <meta name="og:image:height" content="630" />
+  <meta name="og:image:alt" content="AniKawa - Watch Anime Free in HD" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@anikawa" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={imageUrl} />
+  <meta name="twitter:creator" content="Anikawa Team" />
+
+  <link rel="canonical" href={url} />
+  <link
+    rel="sitemap"
+    type="application/xml"
+    title="AniKawa Sitemap"
+    href={url + "/sitemap.xml"}
+  />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/android-chrome-192x192"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="/android-chrome-512x512"
+  />
+  <link rel="manifest" href="/site.webmanifest" />
+  {
+    isHomepage && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )
+  }
+  <link
+    rel="preload"
+    href={fontImpUrl}
+    as="style"
+    onload="this.onLoad=null;this.rel='stylesheet'"
+  />
+  <script src="../scripts/theme-script.js"></script>
+  <slot />
+</head>

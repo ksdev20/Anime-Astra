@@ -2,8 +2,9 @@
 import { Navbar } from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import "../styles/global.css";
+import Head from "../SEO/Head.astro";
 
-const { forPage, title } = Astro.props;
+const { pageHead, forPage, title } = Astro.props;
 let extraClass = "";
 switch (forPage) {
   case "blog":
@@ -16,18 +17,7 @@ switch (forPage) {
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title ?? "Anime Astra"}</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="../scripts/theme-script.js"></script>
-  </head>
+  <Head />
   <body>
     <Navbar client:load />
     <main class="main-body">

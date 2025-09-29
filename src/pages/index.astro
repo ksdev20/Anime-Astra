@@ -4,7 +4,20 @@ import HeroCard from "../components/BlogCard/HeroCard";
 import HomeSection from "../components/HomePage/HomeSection.astro";
 import { Blogs } from "../data/Blogs";
 import Layout from "../layouts/Layout.astro";
+import Head from "../SEO/Head.astro";
 const bco = Blogs[0];
+
+// <section class="non-hero-body">
+//     <HomeSection sectionName="Latest" /> 
+//     <HomeSection sectionName="Action" />
+//     <HomeSection sectionName="Comedy" />
+//     <HomeSection sectionName="Adventure" />
+//     <HomeSection sectionName="Slice of Life" />
+//   </section>
+// <!-- <div class="hs-2">
+//       <HeroCard BcObject={bco} smallHero={true} />
+//       <HeroCard BcObject={bco} smallHero={true} />
+//     </div> -->
 ---
 
 <Layout>
@@ -12,16 +25,5 @@ const bco = Blogs[0];
     <div class="hs-1">
       <HeroCard BcObject={bco} />
     </div>
-    <div class="hs-2">
-      <HeroCard BcObject={bco} smallHero={true} />
-      <HeroCard BcObject={bco} smallHero={true} />
-    </div>
-  </section>
-  <section class="non-hero-body">
-    <HomeSection sectionName="Latest" />
-    <HomeSection sectionName="Action" />
-    <HomeSection sectionName="Comedy" />
-    <HomeSection sectionName="Adventure" />
-    <HomeSection sectionName="Slice of Life" />
   </section>
 </Layout>

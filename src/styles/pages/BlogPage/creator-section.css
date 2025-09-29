@@ -3,7 +3,7 @@
 
 /*creator section*/
 .creator-section{
-    @apply relative z-0 flex flex-col items-center py-10 sm:py-15 px-5 sm:px-10 border-3 rounded-4xl mx-0 sm:mx-10;
+    @apply relative z-0 flex flex-col items-center py-10 sm:py-15 px-5 sm:px-10 border-3 rounded-4xl mt-10 mb-5;
 }
 
 .cs-text-top{

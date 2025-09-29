@@ -20,7 +20,11 @@
 .site-logo {
     font-family: 'Montserrat' sans-serif;
     /* font-family: 'Montserrat'; */
-    @apply text-3xl font-semibold tracking-wide cursor-pointer;
+    @apply flex flex-row items-center justify-center gap-3 text-3xl font-bold tracking-wide cursor-pointer text-left;
+}
+
+.site-icon{
+    @apply w-20 aspect-square;
 }
 
 .hide-for-sb {

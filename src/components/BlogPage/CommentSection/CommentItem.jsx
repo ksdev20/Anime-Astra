@@ -4,10 +4,8 @@ import { Icon } from '../../../icons/icons';
 import { addReply, toggleLike } from '../../../DbFunctions/comments';
 import { useState } from 'react';
 import Loader from '../../Loader/Loader';
-import { containsHTML, isValidValue } from './CommentSection';
+import { containsHTML, isValidValue } from './validation';
 dayjs.extend(relativeTime);
-
-{/*  */ }
 
 export default function CommentItem({ obj, mainIsReply = false, ip, nameG, emailG }) {
     const [liked, setLiked] = useState(obj.likes[ip]);

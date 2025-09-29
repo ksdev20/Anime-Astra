@@ -7,14 +7,15 @@ const sectionObj = HomeSections.find((i) => i.name == sectionName);
 if (!sectionObj) return null;
 const { list, name, type } = sectionObj;
 const isCategory = type == "category";
+//href={`/category/${name.replaceAll(/\s+/gi, "-").toLowerCase()}`}
 ---
 
 <section class="home-section">
   {
     isCategory ? (
-      <a href={`/category/${name.replaceAll(/\s+/gi, "-").toLowerCase()}`} class="hs-heading">
+      <header class="hs-heading">
         {CH ? CH : name}
-      </a>
+      </header>
     ) : (
       <header class="hs-heading">{CH ? CH : name}</header>
     )

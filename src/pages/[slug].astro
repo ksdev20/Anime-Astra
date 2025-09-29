@@ -13,6 +13,7 @@ import CommentSection from "../components/BlogPage/CommentSection/CommentSection
 import AnimeObject from "../components/AnimeObject/AnimeObject.astro";
 
 const { slug } = Astro.params;
+const postUrl = Astro.request.url;
 const blogObj = Blogs.find((i) => i.slug == slug);
 if (!slug || !blogObj) {
   return new Response(null, {
@@ -58,7 +59,7 @@ const creatorLink = "/creator/" + author;
   {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} />)}
   <NextPrevPosts />
   <CreatorSection creatorObj={creatorObj} />
-  <ShareSection />
+  <ShareSection postSlug={slug} postTitle={title} postUrl={postUrl}/>
   <HomeSection sectionName={categoryList[0]} customHeading="Related Posts" />
   <CommentSection slug={slug} client:load />
 </Layout>
