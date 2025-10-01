@@ -7,7 +7,7 @@ if (!prev && !next) return null;
 <section class="next-prev-posts">
   {
     prev && (
-      <a href={"/" + prev} class="npp-btn">
+      <a aria-label="previous post" href={"/" + prev} class="npp-btn">
         <Icon name="keyleft" />
         <span class="npp-text">PREVIOUS POST</span>
       </a>
@@ -15,7 +15,7 @@ if (!prev && !next) return null;
   }
   {
     next && (
-      <a href={"/" + next} class="npp-btn">
+      <a aria-label="next post" href={"/" + next} class="npp-btn">
         <span class="npp-text">NEXT POST</span>
         <Icon name="keyright" />
       </a>

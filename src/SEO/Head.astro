@@ -1,7 +1,7 @@
 ---
 import { defaultHead } from "./default";
 
-const toDestruct = Astro.props.title ? Astro.props.head : defaultHead;
+const toDestruct = Astro.props.head ? Astro.props.head : defaultHead;
 
 const {
   title,

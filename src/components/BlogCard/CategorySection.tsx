@@ -1,20 +1,21 @@
-import '../../styles/components/individuals/category-section.css';
+import "../../styles/components/individuals/category-section.css";
 
 export default function CategorySection({
   categoryList,
 }: {
   categoryList: string[];
 }) {
-  const getLink = (i: string) =>
-    `/category/${i.replaceAll(/\s+/ig, '-')}`;
+  const getLink = (i: string) => `/category/${i.replaceAll(/\s+/gi, "-")}`;
   return (
-    <section className="mt-2 flex items-center gap-2">
+    <ul aria-label="Genre List" className="category-section">
       {categoryList.map((i, idx) => (
-        <a href={getLink(i)} key={idx}  className="category-span">
-          {i}
-        </a>
+        <li key={idx} className="category-span">
+          <a href={getLink(i)} key={idx} >
+            {i}
+          </a>
+        </li>
       ))}
-    </section>
+    </ul>
   );
 }
 //

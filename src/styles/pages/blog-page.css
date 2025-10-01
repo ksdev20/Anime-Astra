@@ -33,6 +33,10 @@
     @apply flex flex-col gap-2 list-decimal pl-5 text-base font-medium;
 }
 
+.toc-sticky{
+    @apply opacity-50 sticky mb-3 z-[50] top-0 left-0 w-fit hover:opacity-100;
+}
+
 /*share section*/
 .share-section{
     @apply border-y-1 border-y-[gray] py-5 my-5 flex items-center justify-end gap-4;

@@ -3,17 +3,17 @@ const { toc } = Astro.props;
 if (!toc) return null;
 ---
 
-<section class="toc-section">
-  <span class="toc-text">TABLE OF CONTENTS</span>
+<nav id="table-of-contents" aria-label="Table of contents" class="toc-section">
+  <h4 class="toc-text">TABLE OF CONTENTS</h4>
   <ol class="toc-list">
     {
       toc?.map((obj: any) => (
         <li>
-          <a href={obj.link} class="underline link">
+          <a href={obj.link} class="underline link" title={obj.text}>
             {obj.text}
           </a>
         </li>
       ))
     }
   </ol>
-</section>
+</nav>

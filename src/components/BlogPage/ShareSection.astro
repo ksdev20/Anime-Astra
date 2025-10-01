@@ -5,8 +5,8 @@ const { postSlug, postTitle, postUrl } = Astro.props;
 ---
 
 <section class="share-section">
-  <span class="ss-text">Share</span>
-  <ul class="share-list">
+  <h4 class="ss-text">Share</h4>
+  <ul aria-label="Share to social media links" class="share-list">
     {
       SocialItems?.map((obj: any) => {
         let link = obj.link;
@@ -27,7 +27,7 @@ const { postSlug, postTitle, postUrl } = Astro.props;
         }
         return (
           <li>
-            <a href={link} target="_blank">
+            <a aria-label={`Share post on ${obj.name}`} href={link} target="_blank">
               <Icon name={obj.svg} size={30} />
             </a>
           </li>

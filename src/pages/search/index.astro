@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Blogs } from "../../data/Blogs";
+import BlogCard from "../../components/BlogCard/BlogCard";
+import Fuse from "fuse.js";
+
+const options = {
+  keys: ["title", "description", "author", 'toc.text', "animeObjects.bigText.content"],
+  threshold: 0.3,
+  includeScore: true,
+};
+const blogFuse = new Fuse(Blogs, options);
+
+const url = new URL(Astro.request.url);
+const q = url.searchParams.get("q") ?? "";
+
+const foundBlogs = blogFuse.search(q).map((r: any) => r.item);
+const isEmpty = foundBlogs.length == 0;
+---
+
+<Layout>
+  <div class="flex justify-center mt-2 sm:mt-5">
+    {
+      isEmpty ? (
+        <span class="text-xl">No results found.</span>
+      ) : (
+        <h1 class="text-2xl font-medium mb-10 border-1 rounded-3xl p-3">
+          Search Results
+        </h1>
+      )
+    }
+  </div>
+  {foundBlogs.map((obj: any) => <BlogCard BcObject={obj} />)}
+</Layout>

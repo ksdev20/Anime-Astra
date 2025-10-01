@@ -7,15 +7,15 @@ const { name, about, socialMedia, createdAt } = obj ?? {};
 ---
 
 <section class="creator-section-fp">
-  <span class="csp-head">About Creator</span>
+  <h1 class="csp-head">About Creator</h1>
   <h2 class="cs-name csp-name">{name}</h2>
   <span class="cs-created">Created : {createdAt}</span>
   <p class="cs-about csp-about">{about}</p>
-  <ul class="flex items-center gap-2 mt-5">
+  <ul class="flex items-center gap-2 mt-5" aria-label="Social media links of creator">
     {
       socialMedia?.map((obj: any) => (
         <li>
-          <a href={obj.link}>
+          <a aria-label={`${obj.name} link of ${name}`} href={obj.link}>
             <Icon name={obj.svg} size={30} />
           </a>
         </li>

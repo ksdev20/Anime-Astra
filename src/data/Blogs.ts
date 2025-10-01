@@ -1,6 +1,10 @@
 export const Blogs = [
   {
     title: "How Anikawa became the most succesful site",
+    description: "This explains How Anikawa became the most succesful site. 36 60 or whatever as long as we here we are forever young we could be born again and again caouse every single day's your bithday",
+    keywords: "",
+    url: "",
+    imageUrl: "",
     subTitle: "",
     author: "MasterMind",
     date: "12/6/2025",

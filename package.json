@@ -14,14 +14,15 @@
     "@astrojs/react": "^4.4.0",
     "@astrojs/vercel": "^8.2.8",
     "@tailwindcss/vite": "^4.1.13",
-    "@types/react": "^19.1.13",
+    "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "astro": "^5.14.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.18",
+    "fuse.js": "^7.1.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.13"

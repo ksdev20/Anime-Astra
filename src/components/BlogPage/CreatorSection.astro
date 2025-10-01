@@ -12,14 +12,14 @@ const creatorLink = "/creator/" + creatorName;
 ---
 
 <section id="about-creator" class="creator-section">
-  <div class="toc-text cs-text-top">ABOUT CREATOR</div>
+  <h4 class="toc-text cs-text-top">ABOUT CREATOR</h4>
   <a href={creatorLink} class="cs-name hov-no-ul">{creatorName}</a>
   <p class="cs-about">{aboutCreator}</p>
   <ul class="socials-ul">
     {
       creatorSocials?.map((obj: any) => (
-        <li>
-          <a href={obj.link}>
+        <li aria-label="Social media links of creator">
+          <a aria-label={`${obj.name} link of ${creatorName}`} href={obj.link}>
             <Icon name={obj.svg} size={30} />
           </a>
         </li>

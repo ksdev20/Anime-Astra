@@ -9,7 +9,7 @@ import NextPrevPosts from "../components/BlogPage/NextPrevPosts.astro";
 import CreatorSection from "../components/BlogPage/CreatorSection.astro";
 import ShareSection from "../components/BlogPage/ShareSection.astro";
 import HomeSection from "../components/HomePage/HomeSection.astro";
-import CommentSection from "../components/BlogPage/CommentSection/CommentSection.jsx";
+import CommentSection from "../components/BlogPage/CommentSection/CommentSection.js";
 import AnimeObject from "../components/AnimeObject/AnimeObject.astro";
 
 const { slug } = Astro.params;
@@ -33,17 +33,31 @@ const {
   toc,
   animeObjects,
 } = blogObj;
+
+const { description, keywords, imageUrl } = blogObj; //For Page Head
+
 if (!animeObjects) return null;
 const creatorObj = Creators.find((i) => i.name == author);
 const creatorLink = "/creator/" + author;
+
+const pageHead = {
+  title: title + " | Anime Astra",
+  description,
+  keywords,
+  url: postUrl,
+  imageUrl,
+  author,
+};
 ---
 
-<Layout forPage="blog">
-  <header class="bp-header">
+<Layout pageHead={pageHead} forPage="blog">
+  <header aria-label="Article Header" class="bp-header">
     <h1 class="bp-h1">{title}</h1>
     <ul class="bph-details">
       <li>by <a href={creatorLink} class="hov-ul">{author}</a></li>
-      <li>• {date}</li>
+      <li>
+        <time datetime={date}>• {date}</time>
+      </li>
       <li>• {readMinutes} Minutes</li>
     </ul>
     <CategorySection categoryList={categoryList} />
@@ -55,11 +69,16 @@ const creatorLink = "/creator/" + author;
     loading="eager"
     fetchpriority="high"
   />
+  <div id="toc"></div>
   <TocSection toc={toc} />
+  <a
+    href="#toc"
+    class="toc-sticky category-span">TOC</a
+  >
   {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} />)}
   <NextPrevPosts />
   <CreatorSection creatorObj={creatorObj} />
-  <ShareSection postSlug={slug} postTitle={title} postUrl={postUrl}/>
+  <ShareSection postSlug={slug} postTitle={title} postUrl={postUrl} />
   <HomeSection sectionName={categoryList[0]} customHeading="Related Posts" />
   <CommentSection slug={slug} client:load />
 </Layout>

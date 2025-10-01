@@ -1,10 +1,8 @@
 ---
 import "../styles/global.css";
 import HeroCard from "../components/BlogCard/HeroCard";
-import HomeSection from "../components/HomePage/HomeSection.astro";
 import { Blogs } from "../data/Blogs";
 import Layout from "../layouts/Layout.astro";
-import Head from "../SEO/Head.astro";
 const bco = Blogs[0];
 
 // <section class="non-hero-body">
@@ -21,8 +19,8 @@ const bco = Blogs[0];
 ---
 
 <Layout>
-  <section class="hero-section">
-    <div class="hs-1">
+  <section aria-label="Hero Section" class="hero-section">
+    <div aria-label="Hero Section part 1" class="hs-1">
       <HeroCard BcObject={bco} />
     </div>
   </section>

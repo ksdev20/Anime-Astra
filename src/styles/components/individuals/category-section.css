@@ -1,14 +1,14 @@
 @import 'tailwindcss';
 @config '../../../../tailwind.config.js';
 
-.categories.section{
-    @apply mt-2;
+.category-section{
+    @apply mt-2 flex items-center gap-2;
 }
 
 .category-span{
-    @apply p-1 bg-[var(--light-dd)] dark:bg-[var(--dark-dd)] rounded-2xl text-white dark:text-black text-sm font-medium;
+    @apply p-1 bg-[var(--light-dd)]  rounded-2xl text-white  text-sm font-medium;
 }
 
 .category-span:nth-child(even){
-    @apply bg-[var(--light-third)] dark:bg-[var(--dark-third)];
+    @apply bg-[var(--light-third)] ;
 }

@@ -54,3 +54,7 @@ svg{
 .link{
     @apply text-[var(--light-link)] dark:text-[var(--dark-link)];
 }
+
+.loader-1{
+    @apply animate-spin rounded-full h-6 w-6 border-3 border-t-transparent border-[white];
+}

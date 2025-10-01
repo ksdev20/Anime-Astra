@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../styles/components/Navbar/navbar-main.css";
+import '../../styles/components/individuals/category-section.css';
 import { Icon } from "../../icons/icons";
 import { checkDark, toggleTheme } from "./functions/toggleTheme";
 
@@ -31,6 +32,7 @@ export function Navbar() {
   const [darkMode, setdarkMode] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const isDark = checkDark();
@@ -39,22 +41,45 @@ export function Navbar() {
   }, []);
   return (
     <header>
-      <nav className="navbar">
-        <section className={`nav-mob-overlay ${showMenu ? "show" : "hidden"}`}>
-          <a href="/all-articles/" className="nmo-btn">
-            All Articles
-          </a>
-          <a href="/legal/about" className="nmo-btn">
-            About
-          </a>
-        </section>
-        <button className="nav-menu-btn" onClick={() => setShowMenu(!showMenu)}>
+      <nav aria-label="Site's top Navbar" className="navbar">
+        <aside
+          aria-label="Sidebar for Mobiles"
+          className={`nav-mob-overlay ${showMenu ? "show" : "hidden"}`}
+        >
+          <nav>
+            <a href="/all-articles/" className="nmo-btn">
+              All Articles
+            </a>
+            <a href="/legal/about" className="nmo-btn">
+              About
+            </a>
+          </nav>
+        </aside>
+        <button
+          aria-label="Menu Button For Mobiles"
+          className="nav-menu-btn"
+          onClick={() => setShowMenu(!showMenu)}
+        >
           <Icon name="menu" color="#000000" />
         </button>
-        <a href="/" className={`site-logo ${showSearch ? "hide-for-sb" : ""}`}>
-          <img src="/ico6.webp" alt="Site Icon" className="site-icon"/>Anime Astra
+        <a
+          aria-label="Link to Homepage"
+          href="/"
+          className={`site-logo ${showSearch ? "hide-for-sb" : ""}`}
+        >
+          <img
+            src="/ico6.webp"
+            alt="Site's Icon"
+            className="site-icon"
+            loading="eager"
+            decoding="async"
+          />
+          <span aria-label="Company Name">Anime Astra</span>
         </a>
-        <section className={`nav-middle ${showSearch ? "hidden" : ""}`}>
+        <section
+          aria-label="Navigation to Pages"
+          className={`nav-middle ${showSearch ? "hidden" : ""}`}
+        >
           <a href="/all-articles/" className="nm-btn">
             All Articles
           </a>
@@ -62,16 +87,28 @@ export function Navbar() {
             About
           </a>
         </section>
-        <section className={`search-bar-sec ${showSearch ? "show" : "hidden"}`}>
+        <form
+          aria-label="Search section"
+          className={`search-bar-sec ${showSearch ? "show" : "hidden"}`}
+          onSubmit={(e) => {
+            e.preventDefault();
+            window.location.href = `/search?q=${query}`;
+          }}
+        >
           <input
+            aria-label="Search Input field"
             id="search-bar"
             type="search"
             className="search-bar"
             placeholder="Search this site"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
-        </section>
+          <button className="category-span ml-5 cp" onClick={() => window.location.href = `/search?q=${query}`}>Submit</button>
+        </form>
         <div className="nav-right">
           <button
+            aria-label="Toggles Search Bar"
             className="search-btn"
             onClick={() => {
               setShowSearch(!showSearch);
@@ -81,6 +118,7 @@ export function Navbar() {
             {!showSearch ? <Icon name="search" /> : <Icon name="close" />}
           </button>
           <button
+            aria-label="Toggles Theme between dark and light mode"
             className="theme-btn"
             onClick={() => {
               toggleTheme();

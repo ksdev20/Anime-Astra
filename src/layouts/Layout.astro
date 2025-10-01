@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 import "../styles/global.css";
 import Head from "../SEO/Head.astro";
 
-const { pageHead, forPage, title } = Astro.props;
+const { pageHead = null, forPage } = Astro.props;
 let extraClass = "";
 switch (forPage) {
   case "blog":
@@ -17,13 +17,21 @@ switch (forPage) {
 ---
 
 <html lang="en">
-  <Head />
+  <Head head={pageHead}/>
   <body>
     <Navbar client:load />
     <main class="main-body">
-      <div class={`mb-child ${extraClass}`}>
-        <slot />
-      </div>
+      {
+        forPage == "blog" ? (
+          <article aria-label="Listicle body" class={`mb-child ${extraClass}`}>
+            <slot />
+          </article>
+        ) : (
+          <div class={`mb-child ${extraClass}`}>
+            <slot />
+          </div>
+        )
+      }
     </main>
     <Footer />
   </body>
