@@ -53,10 +53,10 @@ const items: Record<string, any> = [
     </div>
     <div class="link">
       <div class="imdb-data link">
-        <a aria-label={`Imdb link of ${finalTitle}`} href={ratings.imdb.link}>View on IMDB</a>
+        <a aria-label={`Imdb link of ${finalTitle}`} href={ratings.imdb.link} target="_blank">View on IMDB</a>
       </div>
       <div class="imdb-data">
-        •<a aria-label={`MAL link of ${finalTitle}`} href={ratings.mal.link}>View on MAL</a>
+        •<a aria-label={`MAL link of ${finalTitle}`} href={ratings.mal.link} target="_blank">View on MAL</a>
       </div>
     </div>
     <div>
@@ -64,7 +64,7 @@ const items: Record<string, any> = [
       <dd class="streaming-dd link">
         {
           streaming.map((obj: any) => (
-            <a aria-label={`${obj.platform} link to ${finalTitle}`} href={obj.link}>
+            <a aria-label={`${obj.platform} link to ${finalTitle}`} href={obj.link} target="_blank">
               {obj.platform}({obj.message})
             </a>
           ))

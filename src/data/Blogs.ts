@@ -11,7 +11,7 @@ export const Blogs = [
       "https://as2.ftcdn.net/v2/jpg/05/62/02/41/1000_F_562024161_tGM4lFlnO0OczLYHFFuNNdMUTG9ekHxb.jpg",
     subTitle:
       "Deep, spoiler-free guides to five overlooked action-adventure series — written for beginners and optimized for discovery",
-    author: "MasterMind",
+    author: "Kiseki",
     date: "12/6/2025",
     img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/top-5-overlooked-action-adventure-anime-cover.jpg?updatedAt=1759418512266",
     categoryList: ["Action", "Adventure", "Listicle"],
@@ -38,7 +38,7 @@ export const Blogs = [
           romaji: "Seirei no Moribito",
         },
         img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/seirei-no-moribito.jpg",
-        link: "https://example.com/shows/seirei-no-moribito",
+        link: "https://www.amazon.com/gp/video/detail/B09XZTQD71",
         ratings: {
           imdb: {
             link: "https://www.imdb.com/title/tt1029248/",
@@ -113,7 +113,7 @@ export const Blogs = [
           romaji: "Kino no Tabi",
         },
         img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/kinos-journey.jpg?updatedAt=1759422124998",
-        link: "https://example.com/shows/kinos-journey",
+        link: "https://www.netflix.com/in/title/80193421",
         ratings: {
           imdb: {
             link: "https://www.imdb.com/title/tt0433498/",
@@ -188,7 +188,7 @@ export const Blogs = [
           romaji: "Kanata no Astra",
         },
         img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/astra-lost-in-space.jpg",
-        link: "https://example.com/shows/astra-lost-in-space",
+        link: "https://www.crunchyroll.com/watch/GZ7UV02VW",
         ratings: {
           imdb: {
             link: "https://www.imdb.com/title/tt10483250/",
@@ -263,7 +263,7 @@ export const Blogs = [
           romaji: "No.6",
         },
         img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/no6.jpg",
-        link: "https://example.com/shows/no6",
+        link: "https://www.hulu.jp/watch/100154563",
         ratings: {
           imdb: {
             link: "https://www.imdb.com/title/tt2350826/",
@@ -338,7 +338,7 @@ export const Blogs = [
           romaji: "Baccano",
         },
         img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/baccano.jpg",
-        link: "https://example.com/shows/baccano",
+        link: "https://example.com/stream/baccano",
         ratings: {
           imdb: {
             link: "https://www.imdb.com/title/tt1334722/",
