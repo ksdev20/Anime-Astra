@@ -124,6 +124,7 @@ export default function CommentSection({ slug }: { slug: string }) {
   return (
     <>
       <section
+        id="add-a-comment"
         aria-label="Add a comment section"
         className="add-comment-section"
       >
@@ -150,11 +151,7 @@ export default function CommentSection({ slug }: { slug: string }) {
         <h4 className="hs-heading cs-head">Comments</h4>
         <ul className="comments-list">
           {comments.map((obj, idx) => (
-            <CommentItem
-              key={idx}
-              obj={obj}
-              extra={extra}
-            />
+            <CommentItem key={idx} obj={obj} extra={extra} />
           ))}
         </ul>
       </section>

@@ -2,7 +2,12 @@
 import { HomeSections } from "../../config/HomeSecton/config";
 import BlogCard from "../BlogCard/BlogCard";
 //CH == Custom Heading
-const { sectionName, customHeading: CH = null } = Astro.props;
+const {
+  sectionName,
+  customHeading: CH = null,
+  customId = null,
+  exclude,
+} = Astro.props;
 const sectionObj = HomeSections.find((i) => i.name == sectionName);
 if (!sectionObj) return null;
 const { list, name, type } = sectionObj;
@@ -10,23 +15,24 @@ const isCategory = type == "category";
 //href={`/category/${name.replaceAll(/\s+/gi, "-").toLowerCase()}`}
 ---
 
-<section class="home-section">
+<section id={customId ?? ""} class="home-section">
   {
     isCategory ? (
-      <header class="hs-heading">
-        {CH ? CH : name}
-      </header>
+      <header class="hs-heading">{CH ? CH : name}</header>
     ) : (
       <header class="hs-heading">{CH ? CH : name}</header>
     )
   }
   <ul class="hs-list">
     {
-      list.slice(0, 5).map((obj) => (
-        <li>
-          <BlogCard BcObject={obj} />
-        </li>
-      ))
+      list.slice(0, 5).map((obj) => {
+        if (obj.title == exclude) return null;
+        return (
+          <li>
+            <BlogCard BcObject={obj} />
+          </li>
+        );
+      })
     }
   </ul>
 </section>

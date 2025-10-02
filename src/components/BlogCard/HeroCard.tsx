@@ -6,7 +6,7 @@ export default function HeroCard({
   BcObject,
   smallHero = false,
 }: {
-  BcObject: BcObject;
+  BcObject: any;
   smallHero?: boolean;
 }) {
   const { title, subTitle, author, date, img, slug, readMinutes } = BcObject;

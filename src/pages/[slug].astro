@@ -79,6 +79,6 @@ const pageHead = {
   <NextPrevPosts />
   <CreatorSection creatorObj={creatorObj} />
   <ShareSection postSlug={slug} postTitle={title} postUrl={postUrl} />
-  <HomeSection sectionName={categoryList[0]} customHeading="Related Posts" />
+  <HomeSection sectionName={categoryList[0]} customId="related-posts" customHeading="Related Posts" exclude={title}/>
   <CommentSection slug={slug} client:load />
 </Layout>
