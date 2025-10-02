@@ -3,7 +3,7 @@ import "../../styles/components/Navbar/navbar-main.css";
 import '../../styles/components/individuals/category-section.css';
 import { Icon } from "../../icons/icons";
 import { checkDark, toggleTheme } from "./functions/toggleTheme";
-
+import { Analytics }from '@vercel/analytics/react';
 {
   // <a href="/all-categories/" className="nm-btn">
   //           All Categories
@@ -129,6 +129,7 @@ export function Navbar() {
           </button>
         </div>
       </nav>
+      <Analytics />
     </header>
   );
 }
