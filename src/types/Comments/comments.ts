@@ -22,5 +22,5 @@ export interface CommentItemProps {
     mainIsReply?: boolean,
     mainId?: string,
     extra: Extra,
-    hook: Hook;
+    // hook: Hook;
 }

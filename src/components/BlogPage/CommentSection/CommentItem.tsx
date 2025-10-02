@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Icon } from "../../../icons/icons";
-import { addReply, toggleLike } from "../../../DbFunctions/comments";
-import { useEffect } from "react";
+import { addReply, addReport, toggleLike } from "../../../DbFunctions/comments";
+import { useEffect, useState } from "react";
 import { validate } from "./validation";
 import type { CommentItemProps } from "../../../types/Comments/comments";
 dayjs.extend(relativeTime);
@@ -12,14 +12,22 @@ export default function CommentItem({
   mainIsReply = false,
   mainId = "",
   extra,
-  hook
 }: CommentItemProps) {
   const { ip, nameG, emailG } = extra; //details of user
-  const { _id, name, comment, createdAt, replies = [] } = obj; //details of the specific comment/reply
+  const { _id, name, comment, reply: replyP, createdAt, replies = [] } = obj; //details of the specific comment/reply
   const relativeDate = dayjs(createdAt).fromNow();
   const likeCount = obj.likes ? Object.keys(obj.likes).length : 0;
+  const [res, setRes] = useState({
+    showReplies: false,
+    loading: false,
+    liked: false,
+    likes: likeCount,
+  });
 
-  const { res, setRes } = hook;
+  const [reply, setReply] = useState({
+    val: "",
+    valid: true,
+  });
 
   const setResShort = (field: string, value: any) => {
     setRes((prev: any) => ({
@@ -27,10 +35,6 @@ export default function CommentItem({
       [field]: value,
     }));
   };
-
-  useEffect(() => {
-    setResShort("likes", likeCount);
-  }, []);
 
   const handleTLData = (data: any) => {
     if (data.success) {
@@ -58,22 +62,41 @@ export default function CommentItem({
   };
 
   const handleReplySend = () => {
-    if (!validate("comment", res.reply.val)) {
-      setResShort('reply.valid', false);
+    if (!validate("comment", reply.val)) {
+      setReply({ val: reply.val, valid: false });
       return;
     }
 
     const replyObj = {
       name: nameG,
       email: emailG,
-      reply: res.reply,
+      reply: reply.val,
     };
 
     setResShort("loading", true);
     addReply(_id, replyObj).then((data) => {
+      console.log(data.reply);
+      if (data.reply) {
+        replies.push(data.reply);
+      }
       setResShort("loading", false);
       const msg = data ? "Reply Added ✅" : "Failed to add Reply ❌";
       console.log(msg);
+    });
+  };
+
+  const handleReport = () => {
+    const obj = mainIsReply
+      ? {
+          commentId: mainId,
+          replyId: _id,
+          content: replyP,
+        }
+      : { commentId: _id, content: comment };
+
+    addReport(obj).then((data) => {
+      const msg = data.success ? "Report added successfully ✅" : "Failed to add Report ❌";
+      alert(msg);
     });
   };
 
@@ -84,7 +107,7 @@ export default function CommentItem({
           <span className="ci-name">{name}</span>
           <span className="ci-date">• {relativeDate}</span>
         </header>
-        <p className="ci-comment">{comment}</p>
+        <p className="ci-comment">{comment ?? replyP}</p>
         <section className="ci-header ci-actions">
           <button aria-label="Like" className="ci-btn" onClick={handleLike}>
             {!res.liked ? (
@@ -103,7 +126,7 @@ export default function CommentItem({
               <Icon name="reply" size={20} />
             </button>
           )}
-          <button aria-label="Report" className="ci-btn">
+          <button aria-label="Report" className="ci-btn" onClick={handleReport}>
             <Icon name="report" size={20} />
           </button>
         </section>
@@ -119,13 +142,19 @@ export default function CommentItem({
                   mainIsReply={true}
                   mainId={_id}
                   extra={extra}
-                  hook={{ res, setRes }}
                 />
               ))}
             </ul>
           )}
           <section className="reply-write-sec">
-            <textarea className="reply-input" placeholder="Type your reply" value={res.reply.val} onChange={(e) => setResShort('reply.val', e.target.value)}/>
+            <textarea
+              className="reply-input"
+              placeholder="Type your reply"
+              value={reply.val}
+              onChange={(e) =>
+                setReply((prev) => ({ ...prev, val: e.target.value }))
+              }
+            />
             <button className="send-btn" onClick={handleReplySend}>
               {res.loading ? (
                 <div className="loader-1" />

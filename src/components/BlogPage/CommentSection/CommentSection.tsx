@@ -30,16 +30,16 @@ export default function CommentSection({ slug }: { slug: string }) {
     },
   });
 
-  const [ciRes, setCiRes] = useState({
-    showReplies: false,
-    loading: false,
-    liked: false,
-    likes: 0,
-    reply: {
-      val: "",
-      valid: true,
-    },
-  });
+  // const [ciRes, setCiRes] = useState({
+  //   showReplies: false,
+  //   loading: false,
+  //   liked: false,
+  //   likes: 0,
+  //   reply: {
+  //     val: "",
+  //     valid: true,
+  //   },
+  // });
 
   const setResShort = (field: string, value: string) => {
     setRes((prev) => ({
@@ -165,7 +165,6 @@ export default function CommentSection({ slug }: { slug: string }) {
               key={idx}
               obj={obj}
               extra={extra}
-              hook={{ res: ciRes, setRes: setCiRes }}
             />
           ))}
         </ul>
