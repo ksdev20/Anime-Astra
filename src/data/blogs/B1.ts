@@ -1,7 +1,7 @@
 export const B1 = {
-  title: "Top 5 Overlooked Action-Adventure Anime That Deserve Your Attention",
+  title: "Top 5 Underrated Action-Adventure Anime Worth Watching",
   description:
-    "Five underrated, beginner-friendly action-adventure anime with deep, spoiler-free breakdowns. Each entry includes an extended summary, strong reasons to watch, core themes and philosophy, pacing & what-to-expect, best-for guidance, clear trigger notes, and quick viewing tips to help you decide and stay engaged.",
+    "Discover 5 underrated action-adventure anime with spoiler-free summaries, key themes, pacing tips, trigger notes, and beginner-friendly viewing guidance.",
   keywords:
     "overlooked anime, underrated action anime, beginner friendly anime, action-adventure list, best underrated anime",
   url: "https://animeastra.vercel.app/top-5-overlooked-action-adventure-anime",

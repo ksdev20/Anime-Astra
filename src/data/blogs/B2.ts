@@ -1,7 +1,7 @@
 export const B2 = {
-  title: "Top 5 Anime With Mind Games That Rival Death Note",
+  title: "Top 5 Mind-Game Anime Like Death Note",
   description:
-    "Five psychologically intense anime that rival Death Note in strategy, suspense, and moral complexity. Each entry includes a spoiler-free breakdown, extended summary, reasons to watch, core themes, pacing guide, best-for viewer types, trigger notes, and practical viewing tips.",
+    "Explore 5 intense anime like Death Note—packed with strategy, suspense, and moral twists. Includes spoiler-free summaries, key themes, pacing tips, and viewer guidance.",
   keywords:
     "anime like Death Note, psychological thriller anime, mind games anime, strategic anime, best anime with plot twists",
   url: "https://animeastra.vercel.app/top-5-anime-with-mind-games-that-rival-death-note",
