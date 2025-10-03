@@ -4,9 +4,10 @@ import HeroCard from "../components/BlogCard/HeroCard";
 import { Blogs } from "../data/Blogs";
 import Layout from "../layouts/Layout.astro";
 const bco = Blogs[0];
+const hc2 = Blogs[1];
 
 // <section class="non-hero-body">
-//     <HomeSection sectionName="Latest" /> 
+//     <HomeSection sectionName="Latest" />
 //     <HomeSection sectionName="Action" />
 //     <HomeSection sectionName="Comedy" />
 //     <HomeSection sectionName="Adventure" />
@@ -22,6 +23,10 @@ const bco = Blogs[0];
   <section aria-label="Hero Section" class="hero-section">
     <div aria-label="Hero Section part 1" class="hs-1">
       <HeroCard BcObject={bco} />
+    </div>
+    <div class="hs-2">
+      <HeroCard BcObject={hc2} smallHero={true} />
+      <!-- <HeroCard BcObject={bco} smallHero={true} /> -->
     </div>
   </section>
 </Layout>

@@ -31,6 +31,8 @@ const {
   categoryList,
   img,
   toc,
+  nextPost,
+  previousPost,
   animeObjects,
 } = blogObj;
 
@@ -71,14 +73,18 @@ const pageHead = {
   />
   <div id="toc"></div>
   <TocSection toc={toc} />
-  <a
-    href="#toc"
-    class="toc-sticky category-span">TOC</a
-  >
-  {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} />)}
-  <NextPrevPosts />
+  <a href="#toc" class="toc-sticky category-span">TOC</a>
+  <div class="anime-objects">
+    {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} />)}
+  </div>
+  <NextPrevPosts next={nextPost} prev={previousPost} />
   <CreatorSection creatorObj={creatorObj} />
   <ShareSection postSlug={slug} postTitle={title} postUrl={postUrl} />
-  <HomeSection sectionName={categoryList[0]} customId="related-posts" customHeading="Related Posts" exclude={title}/>
+  <HomeSection
+    sectionName={categoryList[0]}
+    customId="related-posts"
+    customHeading="Related Posts"
+    exclude={title}
+  />
   <CommentSection slug={slug} client:load />
 </Layout>

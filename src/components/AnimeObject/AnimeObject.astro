@@ -23,6 +23,7 @@ const number = i + 1;
 
 const finalTitle = `${number}) ${english} (${romaji})`;
 const items: Record<string, any> = [
+  { "": english },
   { "Release Year: ": releaseYear },
   { "Length: ": `${seasons} Seasons, ${episodes} Episodes` },
   // { "Genres: ": genres.join(", ") },
@@ -33,7 +34,25 @@ const items: Record<string, any> = [
 
 <section aria-label="Anime Object" id={id} class="anime-object">
   <h2 aria-label="Anime title" class="ao-title">{finalTitle}</h2>
-  <img src={img ?? "/black-fallback"} alt={`Cover image for Anime ${finalTitle}`} class="ao-img" loading="lazy" decoding="async"/>
+  <img
+    src={img ?? "/black-fallback"}
+    alt={`Cover image for Anime ${finalTitle}`}
+    class="ao-img"
+    loading="lazy"
+    decoding="async"
+  />
+  <section class="ao-main">
+    {
+      bigText.map((obj: any) => {
+        return (
+          <item class="aom-item">
+            <h3 class="aom-head">{obj.heading}</h3>
+            <p class="aom-content">{obj.content}</p>
+          </item>
+        );
+      })
+    }
+  </section>
   <dl aria-label="Important Info" class="imp-info">
     <span class="toc-text">Important Info</span>
     {
@@ -53,10 +72,18 @@ const items: Record<string, any> = [
     </div>
     <div class="link">
       <div class="imdb-data link">
-        <a aria-label={`Imdb link of ${finalTitle}`} href={ratings.imdb.link} target="_blank">View on IMDB</a>
+        <a
+          aria-label={`Imdb link of ${finalTitle}`}
+          href={ratings.imdb.link}
+          target="_blank">View on IMDB</a
+        >
       </div>
       <div class="imdb-data">
-        •<a aria-label={`MAL link of ${finalTitle}`} href={ratings.mal.link} target="_blank">View on MAL</a>
+        •<a
+          aria-label={`MAL link of ${finalTitle}`}
+          href={ratings.mal.link}
+          target="_blank">View on MAL</a
+        >
       </div>
     </div>
     <div>
@@ -64,7 +91,11 @@ const items: Record<string, any> = [
       <dd class="streaming-dd link">
         {
           streaming.map((obj: any) => (
-            <a aria-label={`${obj.platform} link to ${finalTitle}`} href={obj.link} target="_blank">
+            <a
+              aria-label={`${obj.platform} link to ${finalTitle}`}
+              href={obj.link}
+              target="_blank"
+            >
               {obj.platform}({obj.message})
             </a>
           ))
@@ -72,18 +103,6 @@ const items: Record<string, any> = [
       </dd>
     </div>
   </dl>
-  <section class="ao-main">
-    {
-      bigText.map((obj: any) => {
-        return (
-          <item class="aom-item">
-            <h3 class="aom-head">{obj.heading}</h3>
-            <p class="aom-content">{obj.content}</p>
-          </item>
-        );
-      })
-    }
-  </section>
   <a aria-label="Watch Now Button" class="npp-btn w-btn-anikawa" href={link}>
     <span class="npp-text">Watch Now !</span>
   </a>

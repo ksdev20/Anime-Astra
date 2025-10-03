@@ -5,6 +5,10 @@
     @apply border-y-1 border-[gray] py-8 flex flex-col;
 }
 
+.anime-objects .anime-object:last-child{
+    @apply border-y-0 pb-0;
+}
+
 .ao-title{
     font-family: 'Montserrat' sans-serif;
     @apply text-2xl sm:text-3xl font-bold mb-0 sm:mb-5;
