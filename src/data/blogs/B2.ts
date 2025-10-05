@@ -1,4 +1,6 @@
-export const B2 = {
+import type { Blog } from "../../types/Blog/BlogTypes";
+
+export const B2: Blog = {
   title: "Top 5 Mind-Game Anime Like Death Note",
   description:
     "Explore 5 intense anime like Death Note—packed with strategy, suspense, and moral twists. Includes spoiler-free summaries, key themes, pacing tips, and viewer guidance.",
@@ -26,7 +28,7 @@ export const B2 = {
     { text: "Add a Comment", link: "#add-a-comment" },
     { text: "Comments", link: "#comments" },
   ],
-  nextPost: "",
+  nextPost: "7-anime-with-masterclass-worldbuilding",
   previousPost: "top-5-overlooked-action-adventure-anime",
   animeObjects: [
     {
@@ -69,7 +71,7 @@ export const B2 = {
       ],
       justwatch:
         "https://www.justwatch.com/in/tv-show/code-geass-lelouch-of-the-rebellion",
-      releaseYear: "2006",
+      releaseYear: 2006,
       genres: ["Action", "Mecha", "Psychological", "Thriller"],
       pg: [
         {
@@ -149,7 +151,7 @@ export const B2 = {
         },
       ],
       justwatch: "https://www.justwatch.com/in/tv-show/kaiji",
-      releaseYear: "2007",
+      releaseYear: 2007,
       genres: ["Psychological", "Thriller", "Gambling"],
       pg: [
         {
@@ -224,7 +226,7 @@ export const B2 = {
         },
       ],
       justwatch: "https://www.justwatch.com/in/tv-show/monster",
-      releaseYear: "2004",
+      releaseYear: 2004,
       genres: ["Psychological", "Mystery", "Thriller"],
       pg: [
         {
@@ -299,7 +301,7 @@ export const B2 = {
         },
       ],
       justwatch: "https://www.justwatch.com/in/tv-show/tomodachi-game",
-      releaseYear: "2022",
+      releaseYear: 2022,
       genres: ["Psychological", "Thriller", "Drama"],
       pg: [
         {
@@ -374,7 +376,7 @@ export const B2 = {
         },
       ],
       justwatch: "",
-      releaseYear: "2008",
+      releaseYear: 2008,
       genres: ["Psychological", "Sports", "Thriller"],
       pg: [
         {

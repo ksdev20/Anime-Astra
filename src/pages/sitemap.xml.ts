@@ -5,6 +5,7 @@ export async function GET() {
     "https://animeastra.vercel.app/",
     "https://animeastra.vercel.app/top-5-overlooked-action-adventure-anime",
     "https://animeastra.vercel.app/top-5-anime-with-mind-games-that-rival-death-note",
+    "https://animeastra.vercel.app/5-anime-with-masterclass-worldbuilding",
     "https://animeastra.vercel.app/creator/Kiseki",
     "https://animeastra.vercel.app/all-articles/",
     "https://animeastra.vercel.app/legal/about",

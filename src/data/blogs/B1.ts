@@ -1,4 +1,6 @@
-export const B1 = {
+import type { Blog } from "../../types/Blog/BlogTypes";
+
+export const B1: Blog = {
   title: "Top 5 Underrated Action-Adventure Anime Worth Watching",
   description:
     "Discover 5 underrated action-adventure anime with spoiler-free summaries, key themes, pacing tips, trigger notes, and beginner-friendly viewing guidance.",
@@ -64,7 +66,7 @@ export const B1 = {
       ],
       justwatch:
         "https://www.justwatch.com/in/tv-show/moribito-guardian-of-the-spirit",
-      releaseYear: "2007",
+      releaseYear: 2007,
       genres: ["Action", "Adventure", "Fantasy"],
       pg: [
         {
@@ -139,7 +141,7 @@ export const B1 = {
         },
       ],
       justwatch: "https://www.justwatch.com/",
-      releaseYear: "2003",
+      releaseYear: 2003,
       genres: ["Adventure", "Philosophical", "Slice of Travel"],
       pg: [
         {
@@ -214,7 +216,7 @@ export const B1 = {
         },
       ],
       justwatch: "https://www.justwatch.com/",
-      releaseYear: "2019",
+      releaseYear: 2019,
       genres: ["Sci-Fi", "Adventure", "Mystery"],
       pg: [
         {
@@ -289,7 +291,7 @@ export const B1 = {
         },
       ],
       justwatch: "https://www.justwatch.com/",
-      releaseYear: "2011",
+      releaseYear: 2011,
       genres: ["Sci-Fi", "Dystopia", "Adventure"],
       pg: [
         {
@@ -364,7 +366,7 @@ export const B1 = {
         },
       ],
       justwatch: "https://www.justwatch.com/",
-      releaseYear: "2007",
+      releaseYear: 2007,
       genres: ["Action", "Crime", "Ensemble"],
       pg: [
         {

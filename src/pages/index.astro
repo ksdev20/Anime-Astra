@@ -3,8 +3,9 @@ import "../styles/global.css";
 import HeroCard from "../components/BlogCard/HeroCard";
 import { Blogs } from "../data/Blogs";
 import Layout from "../layouts/Layout.astro";
-const bco = Blogs[0];
+const hc1 = Blogs[0];
 const hc2 = Blogs[1];
+const hc3 = Blogs[2];
 
 // <section class="non-hero-body">
 //     <HomeSection sectionName="Latest" />
@@ -22,11 +23,11 @@ const hc2 = Blogs[1];
 <Layout>
   <section aria-label="Hero Section" class="hero-section">
     <div aria-label="Hero Section part 1" class="hs-1">
-      <HeroCard BcObject={bco} />
+      <HeroCard BcObject={hc1} />
     </div>
     <div class="hs-2">
       <HeroCard BcObject={hc2} smallHero={true} />
-      <!-- <HeroCard BcObject={bco} smallHero={true} /> -->
+      <HeroCard BcObject={hc3} smallHero={true} />
     </div>
   </section>
 </Layout>

@@ -30,6 +30,7 @@ const {
   readMinutes,
   categoryList,
   img,
+  imgLarge,
   toc,
   nextPost,
   previousPost,
@@ -65,7 +66,7 @@ const pageHead = {
     <CategorySection categoryList={categoryList} />
   </header>
   <img
-    src={img}
+    src={imgLarge ?? img}
     alt={`Image for blog titled ${title}`}
     class="bp-main-img"
     loading="eager"
