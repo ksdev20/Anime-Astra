@@ -12,7 +12,7 @@ export const B1: Blog = {
   subTitle:
     "Deep, spoiler-free guides to five overlooked action-adventure series — written for beginners and optimized for discovery",
   author: "Kiseki",
-  date: "12/6/2025",
+  date: "02/10/2025",
   img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/top-5-overlooked-action-adventure-anime-cover.jpg?updatedAt=1759418512266",
   categoryList: ["Action", "Adventure", "Listicle"],
   slug: "top-5-overlooked-action-adventure-anime",

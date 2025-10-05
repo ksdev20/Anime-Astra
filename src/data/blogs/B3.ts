@@ -12,7 +12,7 @@ export const B3: Blog = {
   subTitle:
     "Spoiler-free guides to five richly built anime worlds—from fantasy kingdoms to dystopian futures",
   author: "Kiseki",
-  date: "12/10/2025",
+  date: "05/10/2025",
   img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog3/7-anime-with-masterclass-worldbuilding-cover.webp?updatedAt=1759666920120",
   imgLarge: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog3/5-anime-with-masterclass-worldbuilding-cover-big.webp?updatedAt=1759667693204",
   categoryList: ["Fantasy", "Sci-Fi", "Listicle"],
