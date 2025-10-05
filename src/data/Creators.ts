@@ -4,7 +4,7 @@ export const Creators = [
     {
         name: 'Kiseki',
         about: 'Kiseki lives on a steady diet of opening themes, cliffhangers, and emotional damage. When not debating power scaling or crying over fictional friendships, he’s probably adding another show to his already-overloaded watchlist. No regrets. Just vibes.',
-        createdAt: '20/09/2025',
+        createdAt: '02/10/2025',
         posts: Blogs.slice(0, 3),
         socialMedia: [
             {
