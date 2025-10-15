@@ -2,7 +2,7 @@
     "title": "Top 7 One-Season Anime You Can Finish This Weekend",
     "description": "No filler. No multi-season commitment. Just seven powerful anime you can binge in a weekend — each with a complete story, strong pacing, and beginner-friendly appeal.",
     "keywords": "one season anime, short anime, binge anime, weekend anime, best short anime, anime with no filler, beginner anime",
-    "url": "https://example.com/top-7-one-season-anime-you-can-finish-this-weekend",
+    "url": "https://animeastra.vercel.app/top-7-one-season-anime-you-can-finish-this-weekend",
     "imageUrl": "https://ik.imagekit.io/nwstforna/AnimeAstra/B4/cover.jpg",
     "subTitle": "Seven short anime with full impact — perfect for weekend binge-watching",
     "author": "Kiseki",
@@ -50,15 +50,23 @@
             "link": "#ojisan-to-marshmallow"
         },
         {
-            "text": "Watching Tips",
-            "link": "#watching-tips"
+            "text": "About Creator",
+            "link": "#about-creator"
+        },
+        {
+            "text": "Related Posts",
+            "link": "#related-posts"
+        },
+        {
+            "text": "Add a Comment",
+            "link": "#add-a-comment"
         },
         {
             "text": "Comments",
             "link": "#comments"
         }
     ],
-    "nextPost": "",
+    "nextPost": "top-5-must-watch-anime",
     "previousPost": "5-anime-with-masterclass-worldbuilding",
     "animeObjects": [
         {
