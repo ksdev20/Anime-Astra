@@ -76,10 +76,10 @@
                 "romaji": null
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz123/barakamon",
+            "link": "https://www.crunchyroll.com/series/GYMGD89VY/barakamon",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt3835082/",
+                    "link": "https://www.imdb.com/title/tt3660104/",
                     "rating": "8.2"
                 },
                 "mal": {
@@ -102,14 +102,9 @@
             },
             "streaming": [
                 {
-                    "platform": "Anikawa",
-                    "link": "https://anikawa.vercel.app/show/xyz123/barakamon",
-                    "message": "free, no ads"
-                },
-                {
                     "platform": "Crunchyroll",
                     "link": "https://www.crunchyroll.com/series/GYMGD89VY/barakamon",
-                    "message": "free with ads"
+                    "message": "premium"
                 }
             ],
             "justwatch": "https://www.justwatch.com/in/tv-show/barakamon",
@@ -146,14 +141,14 @@
                 "romaji": null
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz456/id-invaded",
+            "link": "https://tv.apple.com/us/show/id-invaded/umc.cmc.34iju86hgd9b2zpbwqsjojrxt",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt11447966/",
+                    "link": "https://www.imdb.com/title/tt10954274/",
                     "rating": "7.5"
                 },
                 "mal": {
-                    "link": "https://myanimelist.net/anime/40046/ID_Invaded",
+                    "link": "https://myanimelist.net/anime/40046/Id_Invaded",
                     "rating": "7.86"
                 }
             },
@@ -175,14 +170,9 @@
             },
             "streaming": [
                 {
-                    "platform": "Anikawa",
-                    "link": "https://anikawa.vercel.app/show/xyz456/id-invaded",
-                    "message": "free, no ads"
-                },
-                {
-                    "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/series/G79H230GE/id-invaded",
-                    "message": "free with ads"
+                    "platform": "Apple Tv",
+                    "link": "https://tv.apple.com/us/show/id-invaded/umc.cmc.34iju86hgd9b2zpbwqsjojrxt",
+                    "message": "paid"
                 }
             ],
             "justwatch": "https://www.justwatch.com/in/tv-show/id-invaded",
@@ -220,10 +210,10 @@
                 "romaji": null
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz789/rakugo-shinjuu",
+            "link": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.913b722f-d8d1-4bb8-badc-fb9ce34f5a41?tag=justus1ktp-20&token=ADE07EB7B9E7DB86DEEEF0D5D4FC5F0B5FB44D3F",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt5323662/",
+                    "link": "https://www.imdb.com/title/tt6427166/",
                     "rating": "8.4"
                 },
                 "mal": {
@@ -245,11 +235,6 @@
                 "dub": []
             },
             "streaming": [
-                {
-                    "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/series/GY190579R/showa-genroku-rakugo-shinju",
-                    "message": "Available with subtitles in multiple languages"
-                },
                 {
                     "platform": "Prime Video",
                     "link": "https://www.primevideo.com/detail/Showa-Genroku-Rakugo-Shinju/0RCTG4NPRH1HV9R1Z01N9HE9KC",
@@ -290,14 +275,14 @@
                 "romaji": "Yojouhan Shinwa Taikei"
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz101/the-tatami-galaxy",
+            "link": "https://www.amazon.co.uk/gp/video/detail/amzn1.dv.gti.ab5ba18d-9f72-498b-a68f-02edb062b67c?tag=just016-21&token=CA3774BA60135AD0409D07C24960D3F9C54D532C",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt1792283/",
+                    "link": "https://www.imdb.com/title/tt1847445/",
                     "rating": "8.5"
                 },
                 "mal": {
-                    "link": "https://myanimelist.net/anime/918/The_Tatami_Galaxy",
+                    "link": "https://myanimelist.net/anime/7785/Yojouhan_Shinwa_Taikei",
                     "rating": "8.90"
                 }
             },
@@ -314,14 +299,9 @@
             },
             "streaming": [
                 {
-                    "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/the-tatami-galaxy",
-                    "message": "Available with subtitles; region availability may vary"
-                },
-                {
-                    "platform": "Disney+",
-                    "link": "https://www.disneyplus.com/series/the-tatami-galaxy",
-                    "message": "Available in select regions; check local catalog"
+                    "platform": "Prime Video",
+                    "link": "https://www.amazon.co.uk/gp/video/detail/amzn1.dv.gti.ab5ba18d-9f72-498b-a68f-02edb062b67c?tag=just016-21&token=CA3774BA60135AD0409D07C24960D3F9C54D532C",
+                    "message": "use Vpn (USA)"
                 }
             ],
             "justwatch": "https://www.justwatch.com/in/tv-show/the-tatami-galaxy",
@@ -360,10 +340,10 @@
                 "romaji": "Gankutsuou"
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz202/gankutsuou",
+            "link": "https://www.crunchyroll.com/series/G6MG10376/gankutsuou",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt0400909/",
+                    "link": "https://www.imdb.com/title/tt0437719/",
                     "rating": "8.1"
                 },
                 "mal": {
@@ -381,19 +361,15 @@
                     "English"
                 ],
                 "dub": [
-                    "English"
+                    "English",
+                    "Japanese"
                 ]
             },
             "streaming": [
                 {
-                    "platform": "Netflix",
-                    "link": "https://www.netflix.com/title/70213092",
-                    "message": "Available in select regions; check local catalog"
-                },
-                {
                     "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/",
-                    "message": "Availability varies by region"
+                    "link": "https://www.crunchyroll.com/series/G6MG10376/gankutsuou",
+                    "message": "premium"
                 }
             ],
             "justwatch": "https://www.justwatch.com/in/tv-show/gankutsuou-the-count-of-monte-cristo",
@@ -432,14 +408,14 @@
                 "romaji": null
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz303/planet-with",
+            "link": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.3aea9921-9f59-40dc-a24b-e0059214770f?tag=justus1ktp-20&token=ADE07EB7B9E7DB86DEEEF0D5D4FC5F0B5FB44D3F",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt7081234/",
+                    "link": "https://www.imdb.com/title/tt8774888/",
                     "rating": "7.2"
                 },
                 "mal": {
-                    "link": "https://myanimelist.net/anime/36976/Planet_With",
+                    "link": "https://myanimelist.net/anime/37578/Planet_With",
                     "rating": "7.16"
                 }
             },
@@ -458,14 +434,9 @@
             },
             "streaming": [
                 {
-                    "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/series/planet-with",
-                    "message": "Available with subtitles; region availability may vary"
-                },
-                {
-                    "platform": "HIDIVE",
-                    "link": "https://www.hidive.com/series/planet-with",
-                    "message": "Available with subs and limited dub options in some regions"
+                    "platform": "Prime Video",
+                    "link": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.3aea9921-9f59-40dc-a24b-e0059214770f?tag=justus1ktp-20&token=ADE07EB7B9E7DB86DEEEF0D5D4FC5F0B5FB44D3F",
+                    "message": "USA"
                 }
             ],
             "justwatch": "https://www.justwatch.com/in/tv-show/planet-with",
@@ -500,14 +471,14 @@
         {
             "id": "ojisan-to-marshmallow",
             "title": {
-                "english": "Ojisan to Marshmallow",
+                "english": "Ojisan and Marshmallow",
                 "romaji": null
             },
             "img": null,
-            "link": "https://anikawa.vercel.app/show/xyz404/ojisan-to-marshmallow",
+            "link": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.26da69d5-0839-43c1-bdc3-218d21b117ab?tag=justus1ktp-20&token=ADE07EB7B9E7DB86DEEEF0D5D4FC5F0B5FB44D3F",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt12345678/",
+                    "link": "https://www.imdb.com/title/tt5461834/",
                     "rating": "6.2"
                 },
                 "mal": {
@@ -530,14 +501,9 @@
             },
             "streaming": [
                 {
-                    "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/series/GR2PEVP2R/ojisan-and-marshmallow",
-                    "message": "Available with subtitles; light, short episodes"
-                },
-                {
-                    "platform": "Anikawa",
-                    "link": "https://anikawa.vercel.app/show/xyz404/ojisan-to-marshmallow",
-                    "message": "free, ad-supported"
+                    "platform": "Prime Video",
+                    "link": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.26da69d5-0839-43c1-bdc3-218d21b117ab?tag=justus1ktp-20&token=ADE07EB7B9E7DB86DEEEF0D5D4FC5F0B5FB44D3F",
+                    "message": "USA"
                 }
             ],
             "justwatch": "https://www.justwatch.com/in/tv-show/ojisan-to-marshmallow",
