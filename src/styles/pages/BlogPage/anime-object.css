@@ -11,7 +11,7 @@
 
 .ao-title{
     font-family: 'Montserrat' sans-serif;
-    @apply text-2xl sm:text-3xl font-bold mb-0 sm:mb-5;
+    @apply text-2xl sm:text-3xl font-bold mb-0 sm:mb-10;
 }
 
 .ao-img{
@@ -19,7 +19,9 @@
 }
 
 .imp-info{
-    @apply relative z-0 border-2 rounded-2xl px-15 py-5 my-5 flex flex-col flex-wrap gap-2 w-fit self-center items-center justify-center; 
+    @apply relative z-0 flex flex-col md:flex-row flex-wrap self-center
+    items-center justify-center gap-2 md:gap-5 w-fit px-15
+    py-5 md:py-10 my-5 md:my-10 border-2 rounded-2xl;
 }
 
 .imp-info div{

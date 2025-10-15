@@ -1,40 +1,40 @@
 export interface TocObject {
-  text: String;
-  link: String;
+  text: string;
+  link: string;
 }
 
 export interface StreamingPlatform {
-  platform: String;
-  link: String;
-  message: String;
+  platform: string;
+  link: string;
+  message: string;
 }
 
 export interface PgObject {
-  imdb: String;
-  message: String;
+  imdb: string;
+  message: string;
 }
 
 export interface BigTextObj {
-  heading: String;
-  content: String;
+  heading: string;
+  content: string;
 }
 
 export interface AnimeObject {
-  id: String;
+  id: string;
   title: {
-    english: String;
-    romaji: String;
-  } | String;
-  img: String;
-  link: String;
+    english: string;
+    romaji: string;
+  } | string;
+  img: string;
+  link: string;
   ratings: {
     imdb: {
-      link: String;
-      rating?: String;
+      link: string;
+      rating?: string;
     };
     mal: {
-      link: String;
-      rating?: String;
+      link: string;
+      rating?: string;
     };
   };
   seasonMetrics: {
@@ -42,33 +42,33 @@ export interface AnimeObject {
     episodes: number;
   };
   languages: {
-    sub: String[];
-    dub: String[];
+    sub: string[];
+    dub: string[];
   };
   streaming: StreamingPlatform[];
-  justwatch: String;
+  justwatch: string;
   releaseYear: number;
-  genres: String[];
+  genres: string[];
   pg: PgObject[];
   bigText: BigTextObj[];
 }
 
 export interface Blog {
-  title: String;
-  description: String;
-  keywords: String;
-  url: String;
-  imageUrl: String;
-  subTitle: String;
-  author: String;
-  date: String;
-  img: String;
-  imgLarge?: String;
-  categoryList: String[];
-  slug: String;
+  title: string;
+  description: string;
+  keywords: string;
+  url: string;
+  imageUrl: string;
+  subTitle: string;
+  author: string;
+  date: string;
+  img: string;
+  imgLarge?: string;
+  categoryList: string[];
+  slug: string;
   readMinutes: number;
   toc: TocObject[];
-  nextPost: String;
-  previousPost: String;
+  nextPost: string;
+  previousPost: string;
   animeObjects: AnimeObject[];
 }

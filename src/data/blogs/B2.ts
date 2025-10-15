@@ -14,6 +14,7 @@ export const B2: Blog = {
   author: "Kiseki",
   date: "03/10/2025",
   img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog2/top-5-anime-with-mind-games-that-rival-death-note-cover.jpg",
+  imgLarge: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog2/top-5-anime-with-mind-games-that-rival-death-note-cover.jpg",
   categoryList: ["Psychological", "Thriller", "Listicle"],
   slug: "top-5-anime-with-mind-games-that-rival-death-note",
   readMinutes: 11,

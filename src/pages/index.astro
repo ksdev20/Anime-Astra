@@ -3,7 +3,8 @@ import "../styles/global.css";
 import HeroCard from "../components/BlogCard/HeroCard";
 import { Blogs } from "../data/Blogs";
 import Layout from "../layouts/Layout.astro";
-const hc1 = Blogs[0];
+import HomeSection from "../components/HomePage/HomeSection.astro";
+const hc1 = Blogs[Blogs.length - 1];
 const hc2 = Blogs[1];
 const hc3 = Blogs[2];
 
@@ -29,5 +30,8 @@ const hc3 = Blogs[2];
       <HeroCard BcObject={hc2} smallHero={true} />
       <HeroCard BcObject={hc3} smallHero={true} />
     </div>
+  </section>
+  <section class="non-hero-body">
+    <HomeSection sectionName="Action" />
   </section>
 </Layout>

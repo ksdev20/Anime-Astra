@@ -4,6 +4,7 @@ export type BcObject = {
     author: string,
     date: string,
     img: string,
+    imgLarge?: string;
     categoryList: string[],
     slug: string,
     readMinutes?: number,

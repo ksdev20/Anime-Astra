@@ -14,6 +14,7 @@ export const B1: Blog = {
   author: "Kiseki",
   date: "02/10/2025",
   img: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/top-5-overlooked-action-adventure-anime-cover.jpg?updatedAt=1759418512266",
+  imgLarge: "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog1/top-5-overlooked-action-adventure-anime-cover.jpg?updatedAt=1759418512266",
   categoryList: ["Action", "Adventure", "Listicle"],
   slug: "top-5-overlooked-action-adventure-anime",
   readMinutes: 10,

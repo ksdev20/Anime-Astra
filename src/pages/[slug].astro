@@ -23,6 +23,7 @@ if (!slug || !blogObj) {
     },
   });
 }
+
 const {
   title,
   author,
@@ -65,13 +66,17 @@ const pageHead = {
     </ul>
     <CategorySection categoryList={categoryList} />
   </header>
-  <img
-    src={imgLarge ?? img}
-    alt={`Image for blog titled ${title}`}
-    class="bp-main-img"
-    loading="eager"
-    fetchpriority="high"
-  />
+  <picture>
+    <source media="(max-width: 640px)" srcset={img} type="img/jpeg" />
+    <source media="(min-width: 641px)" srcset={imgLarge} type="img/jpeg" />
+    <img
+      src={imgLarge}
+      alt={`Image for blog titled ${title}`}
+      class="bp-main-img"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </picture>
   <div id="toc"></div>
   <TocSection toc={toc} />
   <a href="#toc" class="toc-sticky category-span">TOC</a>

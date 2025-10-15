@@ -21,7 +21,7 @@ const { english, romaji } = title;
 const { seasons, episodes } = seasonMetrics;
 const number = i + 1;
 
-const finalTitle = `${number}) ${english} (${romaji})`;
+const finalTitle = `${number}) ${english} ${romaji ? `(${romaji})` : ""}`;
 const items: Record<string, any> = [
   { "": english },
   { "Release Year: ": releaseYear },
@@ -34,13 +34,17 @@ const items: Record<string, any> = [
 
 <section aria-label="Anime Object" id={id} class="anime-object">
   <h2 aria-label="Anime title" class="ao-title">{finalTitle}</h2>
-  <img
-    src={img ?? "/black-fallback"}
-    alt={`Cover image for Anime ${finalTitle}`}
-    class="ao-img"
-    loading="lazy"
-    decoding="async"
-  />
+  {
+    img && (
+      <img
+        src={img ?? "/black-fallback"}
+        alt={`Cover image for Anime ${finalTitle}`}
+        class="ao-img"
+        loading="lazy"
+        decoding="async"
+      />
+    )
+  }
   <section class="ao-main">
     {
       bigText.map((obj: any) => {

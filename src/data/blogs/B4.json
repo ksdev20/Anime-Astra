@@ -1,0 +1,565 @@
+{
+    "title": "Top 7 One-Season Anime You Can Finish This Weekend",
+    "description": "No filler. No multi-season commitment. Just seven powerful anime you can binge in a weekend — each with a complete story, strong pacing, and beginner-friendly appeal.",
+    "keywords": "one season anime, short anime, binge anime, weekend anime, best short anime, anime with no filler, beginner anime",
+    "url": "https://example.com/top-7-one-season-anime-you-can-finish-this-weekend",
+    "imageUrl": "https://ik.imagekit.io/nwstforna/AnimeAstra/B4/cover.jpg",
+    "subTitle": "Seven short anime with full impact — perfect for weekend binge-watching",
+    "author": "Kiseki",
+    "date": "15/10/2025",
+    "img": "https://ik.imagekit.io/nwstforna/AnimeAstra/B4/cover.jpg",
+    "imgLarge": "https://ik.imagekit.io/nwstforna/AnimeAstra/B4/cover-pc.jpg",
+    "categoryList": [
+        "Action",
+        "Adventure",
+        "Listicle"
+    ],
+    "slug": "top-7-one-season-anime-you-can-finish-this-weekend",
+    "readMinutes": 6,
+    "toc": [
+        {
+            "text": "Quick Notes",
+            "link": "#quick-notes"
+        },
+        {
+            "text": "Barakamon",
+            "link": "#barakamon"
+        },
+        {
+            "text": "ID: Invaded",
+            "link": "#id-invaded"
+        },
+        {
+            "text": "Shouwa Genroku Rakugo Shinjuu",
+            "link": "#shouwa-genroku-rakugo-shinjuu"
+        },
+        {
+            "text": "The Tatami Galaxy",
+            "link": "#the-tatami-galaxy"
+        },
+        {
+            "text": "Gankutsuou",
+            "link": "#gankutsuou"
+        },
+        {
+            "text": "Planet With",
+            "link": "#planet-with"
+        },
+        {
+            "text": "Ojisan to Marshmallow",
+            "link": "#ojisan-to-marshmallow"
+        },
+        {
+            "text": "Watching Tips",
+            "link": "#watching-tips"
+        },
+        {
+            "text": "Comments",
+            "link": "#comments"
+        }
+    ],
+    "nextPost": "",
+    "previousPost": "5-anime-with-masterclass-worldbuilding",
+    "animeObjects": [
+        {
+            "id": "barakamon",
+            "title": {
+                "english": "Barakamon",
+                "romaji": null
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz123/barakamon",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt3835082/",
+                    "rating": "8.2"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/22789/Barakamon",
+                    "rating": "8.38"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 12
+            },
+            "languages": {
+                "sub": [
+                    "English",
+                    "Japanese"
+                ],
+                "dub": [
+                    "English"
+                ]
+            },
+            "streaming": [
+                {
+                    "platform": "Anikawa",
+                    "link": "https://anikawa.vercel.app/show/xyz123/barakamon",
+                    "message": "free, no ads"
+                },
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/series/GYMGD89VY/barakamon",
+                    "message": "free with ads"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/barakamon",
+            "releaseYear": 2014,
+            "genres": [
+                "Slice-of-Life",
+                "Comedy"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-PG",
+                    "message": "Mild language, suggestive humor, and occasional slapstick"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "Barakamon follows Seishu Handa, a young and talented calligrapher who is sent to a remote island after punching a critic. What begins as punishment turns into a transformative journey. Surrounded by eccentric villagers and a mischievous child named Naru, Handa slowly reconnects with his art and himself. The series blends humor, introspection, and rural charm into a heartfelt narrative that’s both relaxing and inspiring. It’s a story about growth, humility, and rediscovery, told through quiet moments and genuine interactions."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "Barakamon is the perfect antidote to high-stakes, adrenaline-fueled anime. It’s a slow-paced, emotionally rich series that delivers laughs and life lessons without ever feeling preachy. The island setting is beautifully animated, and the characters are refreshingly real. Whether it’s Handa’s awkward attempts to fit in or Naru’s chaotic energy, every episode brings warmth and reflection. It’s ideal for viewers who want a break from action-heavy plots and prefer character-driven storytelling with a touch of humor and heart."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "At its core, Barakamon explores the tension between perfectionism and authenticity. Handa’s journey is a meditation on ego, artistic identity, and the value of imperfection. The show suggests that true creativity comes not from isolation or control, but from openness and connection. It also touches on themes of community, mentorship, and emotional vulnerability. Through its gentle pacing and grounded interactions, Barakamon invites viewers to reflect on their own growth and the people who shape it."
+                }
+            ]
+        },
+        {
+            "id": "id-invaded",
+            "title": {
+                "english": "ID: Invaded",
+                "romaji": null
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz456/id-invaded",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt11447966/",
+                    "rating": "7.5"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/40046/ID_Invaded",
+                    "rating": "7.86"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 13
+            },
+            "languages": {
+                "sub": [
+                    "English",
+                    "Japanese",
+                    "Spanish",
+                    "Portuguese",
+                    "Arabic"
+                ],
+                "dub": [
+                    "English"
+                ]
+            },
+            "streaming": [
+                {
+                    "platform": "Anikawa",
+                    "link": "https://anikawa.vercel.app/show/xyz456/id-invaded",
+                    "message": "free, no ads"
+                },
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/series/G79H230GE/id-invaded",
+                    "message": "free with ads"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/id-invaded",
+            "releaseYear": 2020,
+            "genres": [
+                "Sci-Fi",
+                "Mystery",
+                "Crime"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-MA",
+                    "message": "Graphic violence, psychological trauma, and mature themes"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "ID: Invaded is a cerebral sci-fi mystery that follows detective Sakaido as he enters the fragmented mental landscapes of serial killers to solve crimes. These virtual realms, called 'id wells,' are surreal, symbolic, and often disturbing. As Sakaido navigates these subconscious worlds, he uncovers clues that lead to real-world arrests. But the deeper he goes, the more he confronts his own past and the ethical boundaries of justice. The show blends psychological tension with high-concept tech, offering a layered narrative that’s both thrilling and thought-provoking."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "If you enjoy anime that challenge your perception and keep you guessing, ID: Invaded is a must-watch. It combines episodic murder mysteries with an overarching plot that explores identity, guilt, and redemption. The visual design of the id wells is striking and abstract, making each episode a unique experience. The pacing is tight, the stakes are high, and the emotional payoff is real. With just 13 episodes, it delivers a complete arc that’s perfect for weekend bingeing. It’s ideal for fans of thrillers, sci-fi, and psychological drama who want something smart and stylish."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "ID: Invaded dives deep into the nature of justice, memory, and identity. It questions whether understanding a criminal’s mind can lead to true justice, or if it risks corrupting the investigator. The series explores how trauma shapes behavior, and how guilt can both motivate and destroy. It also examines the ethics of surveillance and psychological manipulation in law enforcement. Through its layered storytelling and symbolic visuals, the anime invites viewers to reflect on the cost of truth and the fragility of the human psyche in the pursuit of justice."
+                }
+            ]
+        },
+        {
+            "id": "rakugo-shinjuu",
+            "title": {
+                "english": "Shouwa Genroku Rakugo Shinjuu",
+                "romaji": null
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz789/rakugo-shinjuu",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt5323662/",
+                    "rating": "8.4"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/28735/Shouwa_Genroku_Rakugo_Shinjuu",
+                    "rating": "8.55"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 13
+            },
+            "languages": {
+                "sub": [
+                    "Japanese",
+                    "English",
+                    "Portuguese",
+                    "Spanish"
+                ],
+                "dub": []
+            },
+            "streaming": [
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/series/GY190579R/showa-genroku-rakugo-shinju",
+                    "message": "Available with subtitles in multiple languages"
+                },
+                {
+                    "platform": "Prime Video",
+                    "link": "https://www.primevideo.com/detail/Showa-Genroku-Rakugo-Shinju/0RCTG4NPRH1HV9R1Z01N9HE9KC",
+                    "message": "Available for streaming in select regions"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/showa-genroku-rakugo-shinju",
+            "releaseYear": 2016,
+            "genres": [
+                "Historical",
+                "Drama"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-14",
+                    "message": "Themes of death, suicide, and emotional trauma"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "Shouwa Genroku Rakugo Shinjuu is an immersive, character-first drama that traces the lives of rakugo performers across generations, focusing on apprenticeship, rivalry, and the price of storytelling. The narrative follows Yotaro, a man recently released from prison who seeks purpose by becoming an apprentice to a legendary rakugo master. Through layered flashbacks and shifting perspectives we witness the rise and fall of careers, the hidden costs of fame, and the intimate mechanics of performance. The show places the art of rakugo at its center, using performances as windows into memory and motive while gradually revealing how personal histories and social expectations intertwine to shape identity and destiny. It’s not an action show, but its emotional pacing, dialogue-driven scenes, and attention to theatrical detail create a dramatic momentum that carries the viewer through each episode to a satisfying, complete arc."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "Watch Shouwa Genroku Rakugo Shinjuu if you want a mature, richly textured series that treats storytelling itself as a subject. The anime rewards patient viewers with deeply realized characters whose motivations are revealed through performance, conversation, and regret rather than exposition. The writing is precise and the voice acting excellent, capturing subtle shifts in tone and power between mentor and student, rival and admirer. If you appreciate works that explore craft, legacy, and the human cost of art—shows where a single monologue can upend everything you thought you knew—this series delivers. It also serves as a cultural primer on rakugo, transforming traditional storytelling forms into drama that examines social change in twentieth-century Japan while remaining emotionally accessible to international audiences."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "At its philosophical core, Rakugo Shinjuu interrogates how stories bind us to the past and how performance becomes both shield and confession for its characters. The series examines themes of inheritance, the burden of expectation, and the ways in which memory distorts or preserves identity. Characters wrestle with ambition, jealousy, and the ethical compromises that accompany artistic pursuit; mentorship is portrayed not as simple benevolence but as a transaction that reshapes lives across decades. The anime also meditates on the relationship between public persona and private pain, showing how the craft of storytelling can illuminate personal truth while demanding emotional sacrifice. Through sustained, dialogic scenes and careful pacing, the show invites viewers to consider the costs of maintaining tradition in a changing world and the quiet heroism of artists who persist despite their flaws and losses."
+                }
+            ]
+        },
+        {
+            "id": "the-tatami-galaxy",
+            "title": {
+                "english": "The Tatami Galaxy",
+                "romaji": "Yojouhan Shinwa Taikei"
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz101/the-tatami-galaxy",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt1792283/",
+                    "rating": "8.5"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/918/The_Tatami_Galaxy",
+                    "rating": "8.90"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 11
+            },
+            "languages": {
+                "sub": [
+                    "Japanese",
+                    "English"
+                ],
+                "dub": []
+            },
+            "streaming": [
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/the-tatami-galaxy",
+                    "message": "Available with subtitles; region availability may vary"
+                },
+                {
+                    "platform": "Disney+",
+                    "link": "https://www.disneyplus.com/series/the-tatami-galaxy",
+                    "message": "Available in select regions; check local catalog"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/the-tatami-galaxy",
+            "releaseYear": 2010,
+            "genres": [
+                "Surreal",
+                "Slice-of-Life",
+                "Romance",
+                "Comedy"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-14",
+                    "message": "Rapid-fire dialogue, mild language, and existential themes may be intense for some viewers"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "The Tatami Galaxy follows a nameless college student as he cycles through alternate versions of his university life in search of a fulfilling campus experience. Each episode resets reality to explore a different choice and its consequences, creating a loop of parallel possibilities that range from absurd to deeply poignant. The show is propelled by hyperactive narration, dense wordplay, and a stream-of-consciousness rhythm that compresses entire lifetimes of regret, hope, and comedic misadventure into compact, surreal vignettes. While the central conceit is simple — one life, many paths — the series uses tight visual motifs, symbolic callbacks, and a kaleidoscopic sense of timing to transform what could be a gimmick into a meditation on chance, agency, and the cost of chasing an idealized narrative of youth. Viewers are invited into a world where choices reverberate, and the familiar university setting becomes a crucible for identity, longing, and the messy, contradictory logic of growing up."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "Watch The Tatami Galaxy if you crave an anime that treats form as part of its argument. This series refuses to coast on plot comforts and instead assaults the viewer with linguistic flourish, inventive editing, and visual shorthand that rewards attention. It is both laugh-out-loud funny and quietly devastating, folding jokes into melancholic insights with surgical precision. Each episode is a self-contained experiment in tone and possibility, yet the cumulative effect builds a thematic resolution that recontextualizes earlier episodes. The show challenges expectations about pacing and narrative satisfaction, asking viewers to accept elliptical storytelling in exchange for emotional payoff and intellectual surprise. For anyone tired of conventional arcs and eager for something that feels curated, intricate, and singular, The Tatami Galaxy is a daring, short-form masterpiece that makes efficient use of its eleven episodes while leaving a lasting impression that invites rewatching and deeper reflection."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "At its core, The Tatami Galaxy interrogates the myth of the perfect life path and the idea that happiness is the inevitable reward of the 'right' choice. The series examines how narrative thinking — the stories we tell ourselves about who we are and what we deserve — distorts experience and generates endless dissatisfaction. Through looping timelines, the show dramatizes how minor choices compound into a sense of identity, and how longing often blinds characters to simpler, more present forms of fulfillment. It also explores the social pressures of youth, the hunger for meaning in a crowded world, and the human tendency to fetishize possibility. Stylistically, the anime uses repetition and variation not as tricks but as philosophical probes, turning formal play into a method for understanding regret, agency, and the provisional nature of selfhood. The result is a show that feels both personal and universal: a meditation on how to live when every path seems to promise something just out of reach."
+                }
+            ]
+        },
+        {
+            "id": "gankutsuou",
+            "title": {
+                "english": "Gankutsuou: The Count of Monte Cristo",
+                "romaji": "Gankutsuou"
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz202/gankutsuou",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt0400909/",
+                    "rating": "8.1"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/239/Gankutsuou",
+                    "rating": "8.11"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 24
+            },
+            "languages": {
+                "sub": [
+                    "Japanese",
+                    "English"
+                ],
+                "dub": [
+                    "English"
+                ]
+            },
+            "streaming": [
+                {
+                    "platform": "Netflix",
+                    "link": "https://www.netflix.com/title/70213092",
+                    "message": "Available in select regions; check local catalog"
+                },
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/",
+                    "message": "Availability varies by region"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/gankutsuou-the-count-of-monte-cristo",
+            "releaseYear": 2004,
+            "genres": [
+                "Gothic",
+                "Drama",
+                "Sci-Fi",
+                "Revenge"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-MA",
+                    "message": "Violence, strong themes of revenge, and mature emotional content"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "Gankutsuou retells Alexandre Dumas’s classic tale of betrayal and revenge in a strikingly reimagined futuristic setting, following the young aristocrat Albert as he befriends the enigmatic Count of Monte Cristo. The series unfolds through Albert’s perspective, revealing lavish society, occult undertones, and a meticulously plotted vendetta that ripples through friendships and fortunes. Visually, the show subverts expectations with layered textures, bold patterns, and an almost collage-like aesthetic that turns each frame into a piece of ornamental storytelling. This adaptation preserves the core drama of the source material—betrayal, exile, and calculated retribution—while reframing motivations and relationships so they resonate within a stylized sci-fi court. The narrative balances courtly intrigue with intimate emotional stakes, letting the viewer witness how a single act of treachery metastasizes across years and social strata, all without relying on explicit spoilers to communicate the stakes or the payoff."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "Watch Gankutsuou if you want an anime that feels both operatic and intimate, where visual audacity matches narrative ambition. The series is rare for combining a classical revenge plot with futuristic trappings and an aesthetic that refuses to play it safe; every episode is a deliberate contrast of opulence and cold calculation. Characters are written with conflicting loyalties and concealed motives, and the show excels at revealing how petty cruelties and social machinations escalate into life-altering consequences. Beyond plot, the adaptation offers a sustained emotional inquiry into the costs of vengeance, the fragility of trust, and the ways trauma reshapes identity. For viewers who appreciate artful production design, layered character work, and themes that linger after the credits, Gankutsuou is an essential single-season experience that rewards both first-time viewers and those who return for its stylistic and thematic density."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "Gankutsuou probes the corrosive logic of revenge while interrogating the social systems that allow betrayal to flourish. The series asks whether vengeance can ever restore what was lost or whether it instead creates new suffering that perpetuates the original wound. It examines identity through masks—both literal and figurative—and questions how public persona and private torment interact to produce monstrous outcomes. The futuristic court and exotic settings function as a mirror for class decadence, where the trappings of wealth obscure moral rot. At the same time, the story meditates on forgiveness, memory, and the ethical paradoxes of retribution, suggesting that the desire for payback often traps its pursuer in the very cycles they sought to break. Through ornate visuals and concentrated character drama, the anime turns a classic moral tale into a meditation on consequence, legacy, and the human cost of settling scores."
+                }
+            ]
+        },
+        {
+            "id": "planet-with",
+            "title": {
+                "english": "Planet With",
+                "romaji": null
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz303/planet-with",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt7081234/",
+                    "rating": "7.2"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/36976/Planet_With",
+                    "rating": "7.16"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 12
+            },
+            "languages": {
+                "sub": [
+                    "Japanese",
+                    "English"
+                ],
+                "dub": [
+                    "English"
+                ]
+            },
+            "streaming": [
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/series/planet-with",
+                    "message": "Available with subtitles; region availability may vary"
+                },
+                {
+                    "platform": "HIDIVE",
+                    "link": "https://www.hidive.com/series/planet-with",
+                    "message": "Available with subs and limited dub options in some regions"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/planet-with",
+            "releaseYear": 2018,
+            "genres": [
+                "Mecha",
+                "Psychological",
+                "Action",
+                "Drama"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-14",
+                    "message": "Action violence, existential themes, and some emotional intensity"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "Planet With begins with a deceptively simple premise: a young amnesiac wakes in a world where giant mecha and mysterious aliens shape the recent past, and he is drawn into conflicts he cannot immediately remember. The narrative quickly branches into a compact, emotionally driven arc that mixes episodic confrontations with a steadily revealing backstory. What makes the series arresting is how it layers memory loss, moral ambiguity, and sincere interpersonal moments into a tight twelve-episode structure, allowing character revelations to land with real impact. Visuals shift between kinetic fight choreography and quieter domestic scenes, and the show consistently remembers to connect spectacle to stakes, never letting action float free of consequence. Planet With ultimately resolves its central mysteries without dangling threads, offering both spectacle and a surprising degree of thematic clarity about culpability, friendship, and the cost of peace."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "Planet With is recommended for viewers who want an emotionally compact mecha story that refuses to lean solely on nostalgia or genre comfort. The series subverts expectations by pairing intensely choreographed battles with sincere character work, so viewers who come for the fights will stay for the human moments that give those fights weight. The pacing is efficient: each episode advances plot while deepening relationships and revealing history, which makes it exceptionally bingeable in a single weekend. Despite its brevity, the show takes time to examine the motives of both protagonists and antagonists, encouraging empathy without excusing wrongdoing. If you appreciate anime that balance conceptual bravado with human-scale consequences and prefer a single-season story that closes cleanly, Planet With is a strong, underrated choice."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "At its philosophical core, Planet With asks questions about reconciliation, memory, and the ethics of defending a worldview. The characters are often set against moral dilemmas where both sides feel justified, and the series invites viewers to sit with the discomfort of ambiguous answers rather than supplying simple moral victories. Memory functions as both a plot device and a thematic lens: recovering the past forces characters to reassess loyalties and acknowledge harm, and the show treats remembrance as a necessary, if painful, step toward healing. The anime also probes the idea that violence can entrench identity as much as resolve conflict, asking whether cycles of retaliation are ever truly broken by force. Throughout, Planet With balances spectacle with reflection, using its mecha battles to dramatize ethical questions about responsibility, forgiveness, and what it means to protect what you love."
+                }
+            ]
+        },
+        {
+            "id": "ojisan-to-marshmallow",
+            "title": {
+                "english": "Ojisan to Marshmallow",
+                "romaji": null
+            },
+            "img": null,
+            "link": "https://anikawa.vercel.app/show/xyz404/ojisan-to-marshmallow",
+            "ratings": {
+                "imdb": {
+                    "link": "https://www.imdb.com/title/tt12345678/",
+                    "rating": "6.2"
+                },
+                "mal": {
+                    "link": "https://myanimelist.net/anime/31848/Ojisan_to_Marshmallow",
+                    "rating": "6.08"
+                }
+            },
+            "seasonMetrics": {
+                "seasons": 1,
+                "episodes": 12
+            },
+            "languages": {
+                "sub": [
+                    "Japanese",
+                    "English"
+                ],
+                "dub": [
+                    "English"
+                ]
+            },
+            "streaming": [
+                {
+                    "platform": "Crunchyroll",
+                    "link": "https://www.crunchyroll.com/series/GR2PEVP2R/ojisan-and-marshmallow",
+                    "message": "Available with subtitles; light, short episodes"
+                },
+                {
+                    "platform": "Anikawa",
+                    "link": "https://anikawa.vercel.app/show/xyz404/ojisan-to-marshmallow",
+                    "message": "free, ad-supported"
+                }
+            ],
+            "justwatch": "https://www.justwatch.com/in/tv-show/ojisan-to-marshmallow",
+            "releaseYear": 2016,
+            "genres": [
+                "Comedy",
+                "Romance",
+                "Slice-of-Life",
+                "Short-Form"
+            ],
+            "pg": [
+                {
+                    "imdb": "TV-14",
+                    "message": "Sexualized humor and suggestive themes; mild language"
+                }
+            ],
+            "bigText": [
+                {
+                    "heading": "Spoiler-Free Summary",
+                    "content": "Ojisan to Marshmallow is a short-form romantic comedy that centers on Hige, an affable middle-aged office worker with an unabashed obsession for marshmallows, and his younger coworker Wakabayashi, who discovers and delights in his eccentric fixation. The series is structured as bite-sized episodes that chronicle small, awkward, and frequently comedic interactions between Hige and the office cast, with much of the humor arising from Wakabayashi’s playful flirtation and Hige’s naïve, earnest responses. Despite its light surface tone, the show creates steady character dynamics through repeated moments of embarrassment, affection, and social awkwardness, allowing viewers to watch a very specific and unusual romance unfold almost entirely through charmingly mundane office life. The narrative never aims for grand drama or sweeping arcs; instead, it commits to the micro-moments that make quirky relationships feel real, offering an accessible and low-commitment viewing experience that wraps up within a single season of short episodes."
+                },
+                {
+                    "heading": "Why Should You Watch It",
+                    "content": "Watch Ojisan to Marshmallow if you want a palette-cleanser of an anime that prioritizes light-hearted comedy and small emotional payoffs over complex plotting. Its short episode length makes it ideal for quick breaks, commutes, or single-evening consumption, and its tone is deliberately playful rather than serious. The series is notable for how it leans into sexualized humor while balancing it with genuine warmth, portraying an odd-couple dynamic that can be surprisingly tender beneath the gags. If you appreciate workplace comedies, understated romantic development, and character chemistry conveyed through recurring visual jokes and awkward beats, this anime delivers reliable laughs and occasional sweetness without overstaying its welcome. It’s a pragmatic pick for readers who want a breezy one-season watch that won’t demand emotional investment but will reward patience with consistent, low-stakes charm."
+                },
+                {
+                    "heading": "Philosophy and Themes",
+                    "content": "Beneath the surface-level comedy of Ojisan to Marshmallow lies a modest meditation on boundaries, kindness, and the humanizing power of harmless obsession. The show plays with questions about social norms and acceptable affection, using Hige’s marshmallow fixation as a stylized lens to examine how adults navigate desire, consent, and playfulness within everyday settings. It also explores the way small rituals and eccentricities function as bridges between people, allowing characters to form connections through shared laughter and mutual tolerance. While the series never pretends to interrogate these themes with heavy seriousness, it nonetheless treats its characters with a degree of empathy that prevents them from becoming mere punchlines. The result is a short-form comedy that, beneath its suggestive surface, gestures toward modest truths about companionship, the odd rituals that sustain relationships, and how affection can be expressed in ways that are both awkward and oddly sincere."
+                }
+            ]
+        }
+    ]
+}
