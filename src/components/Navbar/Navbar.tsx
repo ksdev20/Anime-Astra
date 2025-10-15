@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "../../styles/components/Navbar/navbar-main.css";
-import '../../styles/components/individuals/category-section.css';
+import "../../styles/components/individuals/category-section.css";
 import { Icon } from "../../icons/icons";
 import { checkDark, toggleTheme } from "./functions/toggleTheme";
-import { Analytics }from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 {
   // <a href="/all-categories/" className="nm-btn">
   //           All Categories
@@ -47,6 +47,33 @@ export function Navbar() {
           className={`nav-mob-overlay ${showMenu ? "show" : "hidden"}`}
         >
           <nav>
+            <div className="flex-center w-full h-15">
+              <form
+                aria-label="Search section"
+                className={`search-bar-sec sbs-mob`}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  window.location.href = `/search?q=${query}`;
+                }}
+              >
+                <input
+                  aria-label="Search Input field"
+                  id="search-bar"
+                  type="search"
+                  className="search-bar sb-mob"
+                  placeholder="Search this site"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+                <button
+                className="cp p-1"
+                  onClick={() => (window.location.href = `/search?q=${query}`)}
+                >
+                  <Icon name="search" />
+                </button>
+                {/* <button className="category-span ml-5 cp">Submit</button> */}
+              </form>
+            </div>
             <a href="/all-articles/" className="nmo-btn">
               All Articles
             </a>
@@ -89,7 +116,7 @@ export function Navbar() {
         </section>
         <form
           aria-label="Search section"
-          className={`search-bar-sec ${showSearch ? "show" : "hidden"}`}
+          className={`search-bar-sec ${showSearch ? "show" : "hidden"} lg:flex`}
           onSubmit={(e) => {
             e.preventDefault();
             window.location.href = `/search?q=${query}`;
@@ -104,7 +131,12 @@ export function Navbar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <button className="category-span ml-5 cp" onClick={() => window.location.href = `/search?q=${query}`}>Submit</button>
+          <button
+            className="category-span ml-5 cp"
+            onClick={() => (window.location.href = `/search?q=${query}`)}
+          >
+            Submit
+          </button>
         </form>
         <div className="nav-right">
           <button

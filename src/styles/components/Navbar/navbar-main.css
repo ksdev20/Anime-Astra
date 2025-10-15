@@ -2,7 +2,7 @@
 @config '../../../../tailwind.config.js';
 
 .navbar {
-    @apply relative flex items-center justify-between px-5 py-5 bg-transparent border-b-2 md:px-10 h-max;
+    @apply fixed z-[50] w-full bg-white dark:bg-black flex items-center justify-between px-5 py-4 md:px-10 h-max;
 }
 
 .nav-menu-btn {
@@ -20,11 +20,11 @@
 .site-logo {
     font-family: 'Montserrat' sans-serif;
     /* font-family: 'Montserrat'; */
-    @apply flex flex-row items-center justify-center gap-3 text-3xl font-bold tracking-wide cursor-pointer text-left;
+    @apply flex flex-row items-center justify-center gap-3 text-2xl md:text-3xl font-bold tracking-wide cursor-pointer text-left;
 }
 
 .site-icon{
-    @apply w-20 aspect-square;
+    @apply w-14 aspect-square;
 }
 
 .hide-for-sb {
@@ -60,11 +60,27 @@
 }
 
 .search-btn {
-    @apply cursor-pointer;
+    @apply cursor-pointer hidden sm:flex lg:hidden;
+}
+
+.search-bar-sec{
+    @apply w-full max-w-[300px];
+}
+
+.sbs-mob{
+    @apply flex-center gap-5 px-10 w-full h-full max-w-[500px] py-3;
+}
+
+.sbs-mob svg{
+    @apply fill-white;
 }
 
 .search-bar {
-    @apply outline-2 p-1 text-base w-[250px] h-fit;
+    @apply rounded-tl-2xl rounded-br-2xl outline-2 dark:outline-gray-500 dark:placeholder-gray-200  p-1 pl-3 text-base w-[250px] lg:w-full h-fit;
+}
+
+.sb-mob{
+    @apply outline-white text-white placeholder-gray-300 flex gap-5 w-full h-full;
 }
 
 .nm-hover-dd {

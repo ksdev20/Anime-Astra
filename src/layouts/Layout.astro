@@ -20,6 +20,9 @@ switch (forPage) {
   <Head head={pageHead}/>
   <body>
     <Navbar client:load />
+    <div class="flex w-full py-4">
+      <span class="h-[56px] w-full">|</span>
+    </div>
     <main class="main-body">
       {
         forPage == "blog" ? (

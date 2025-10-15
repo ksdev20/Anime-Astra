@@ -7,15 +7,15 @@
 .hero-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    @apply relative z-0 w-full gap-4 sm:gap-2 mb-5 text-white h-auto sm:max-h-[var(--max-h)] sm:overflow-hidden;
+    @apply relative z-0 w-full gap-4 md:gap-2 mb-5 text-white h-auto md:max-h-[var(--max-h)] md:overflow-hidden;
 }
 
 .hs-1 {
-    @apply col-start-1 max-h-[var(--max-h)];
+    @apply col-start-1 max-h-[300px] md:max-h-[var(--max-h)];
 }
 
 .hs-2 {
-    @apply col-start-2 flex flex-col w-full h-full gap-4 sm:gap-2 sm:max-h-[var(--max-h)];
+    @apply col-start-2 flex flex-col w-full h-full gap-4 md:gap-2 md:max-h-[var(--max-h)];
 }
 
 .hero-card {
@@ -23,11 +23,11 @@
 }
 
 .small-hero {
-    @apply w-full sm:max-h-[calc(300px-4px)];
+    @apply w-full md:max-h-[calc(300px-4px)];
 }
 
 .hero-img {
-    @apply w-full h-full block object-cover;
+    @apply w-full h-[300px] sm:h-[300px] md:h-full block object-cover;
 }
 
 .hero-ol {
@@ -44,7 +44,7 @@
 }
 
 .small-hero .hc-title {
-    @apply text-3xl sm:text-base md:text-lg lg:text-2xl;
+    @apply text-3xl sm:text-2xl md:text-lg xl:text-xl;
 }
 
 .small-hero .hero-ol-main {
@@ -55,7 +55,7 @@
     @apply sm:hidden lg:flex;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .hero-section {
         @apply static flex flex-col mb-15;
     }
