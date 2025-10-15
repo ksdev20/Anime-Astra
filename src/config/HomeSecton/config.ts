@@ -7,7 +7,8 @@ function getCategoryList(category : string){
 const sevenDaysAgoDDMMYYYY = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toLocaleDateString('en-GB');
 
 export const HomeSections = [
-    {name: 'All', list: [Blogs[0]], type: 'date'},
+    {name: 'All', list: Blogs, type: 'date'},
+    {name: 'All Articles', list: [Blogs[0]], type: 'date'},
     {name: 'Latest', list: Blogs.filter(i => i.date > sevenDaysAgoDDMMYYYY), type: 'date'},
     {name: 'Creator', list: Blogs, type: 'date'},
     {name: 'Trending', list: [], type: 'popularity'},

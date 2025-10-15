@@ -7,14 +7,14 @@ export const defaultHead = {
     description: commonDesc,
     keywords: "anime listicle, anime blog, anime list, top 5 anime, top 10 anime",
     url: frontendUrl,
-    imageUrl: "/site-img-og.png",
+    imageUrl: frontendUrl + "/animeastra-og-img-pc-2.webp",
     author: "Anime Astra Team",
     jsonLd: {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Anime Astra",
         "url": frontendUrl,
-        "image": frontendUrl + "/site-img-og.png",
+        "image": frontendUrl + "/animeastra-og-img-pc-2.webp",
         "description": commonDesc,
         "alternativeName": "Anime Listicle hub",
         "publisher": {

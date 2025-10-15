@@ -9,10 +9,12 @@ export default function HeroCard({
   BcObject: any;
   smallHero?: boolean;
 }) {
-  const { title, subTitle, author, date, img, slug, readMinutes } = BcObject;
+  const { title, subTitle, author, date, img, imgLarge, slug, readMinutes } = BcObject;
+  const desiredImage = !smallHero ? imgLarge : img;
+
   return (
     <article aria-label={`Article Card titled ${title}`} className={`hero-card ${smallHero ? "small-hero" : ""}`}>
-      <img src={img} alt={`Cover Image for Article`} className="hero-img"/>
+      <img src={desiredImage} alt={`Cover Image for Article`} className="hero-img"/>
       <section className="hero-ol">
         <div className="hero-ol-main">
           <a href={'./' + slug} className="hc-title hov-ul" aria-label="Link to Article">
