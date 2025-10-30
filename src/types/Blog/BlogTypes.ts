@@ -54,6 +54,7 @@ export interface AnimeObject {
 }
 
 export interface Blog {
+  noImages?: boolean;
   title: string;
   description: string;
   keywords: string;

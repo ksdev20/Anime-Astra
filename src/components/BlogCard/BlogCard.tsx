@@ -11,6 +11,7 @@ export default function BlogCard({ BcObject }: { BcObject: BcObject }) {
     date,
     img,
     imgLarge,
+    imgHomePc,
     categoryList,
     slug,
     readMinutes,
@@ -18,7 +19,11 @@ export default function BlogCard({ BcObject }: { BcObject: BcObject }) {
   return (
     <article aria-label={`Article Card titled ${title}`} className="blog-card">
       <a aria-label="" href={"/" + slug} className="bc-img">
-        <img src={img} alt={`Cover image for article`} className="bc-img" />
+        <picture className="bc-image">
+          <source media="(max-width: 640px)" srcSet={img} type="img/jpeg" />
+          <source media="(min-width: 641px)" srcSet={imgHomePc} type="img/jpg" />
+          <img src={img} alt={`Cover image for article`} className="bc-img" />
+        </picture>
       </a>
       <section className="text-section">
         <a href={"/" + slug} className="bc-title">

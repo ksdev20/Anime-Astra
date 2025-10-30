@@ -124,7 +124,6 @@ export default function CommentSection({ slug }: { slug: string }) {
   return (
     <>
       <section
-        id="add-a-comment"
         aria-label="Add a comment section"
         className="add-comment-section"
       >

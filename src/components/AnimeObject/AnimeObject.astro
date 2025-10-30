@@ -1,7 +1,7 @@
 ---
 import "../../styles/pages/BlogPage/anime-object.css";
 import CategorySection from "../BlogCard/CategorySection";
-const { animeObj, i } = Astro.props;
+const { animeObj, i, tocId, noImages } = Astro.props;
 if (!animeObj) return null;
 const {
   id,
@@ -35,7 +35,7 @@ const items: Record<string, any> = [
 <section aria-label="Anime Object" id={id} class="anime-object">
   <h2 aria-label="Anime title" class="ao-title">{finalTitle}</h2>
   {
-    img && (
+    img && !noImages && (
       <img
         src={img ?? "/black-fallback"}
         alt={`Cover image for Anime ${finalTitle}`}
@@ -107,6 +107,7 @@ const items: Record<string, any> = [
       </dd>
     </div>
   </dl>
+  <div id={tocId}></div>
   <a aria-label="Watch Now Button" class="npp-btn w-btn-anikawa" href={link}>
     <span class="npp-text">Watch Now !</span>
   </a>

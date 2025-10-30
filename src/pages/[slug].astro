@@ -36,6 +36,7 @@ const {
   nextPost,
   previousPost,
   animeObjects,
+  noImages
 } = blogObj;
 
 const { description, keywords, imageUrl } = blogObj; //For Page Head
@@ -68,7 +69,7 @@ const pageHead = {
   </header>
   <picture>
     <source media="(max-width: 640px)" srcset={img} type="img/jpeg" />
-    <source media="(min-width: 641px)" srcset={imgLarge} type="img/jpeg" />
+    <source media="(min-width: 641px)" srcset={imgLarge} type="img/webp" />
     <img
       src={imgLarge}
       alt={`Image for blog titled ${title}`}
@@ -81,8 +82,9 @@ const pageHead = {
   <TocSection toc={toc} />
   <a href="#toc" class="toc-sticky category-span">TOC</a>
   <div class="anime-objects">
-    {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} />)}
+    {animeObjects.map((obj, i) => <AnimeObject animeObj={obj} i={i} tocId={animeObjects[i + 1]?.id ?? obj?.id} noImages={noImages} />)}
   </div>
+  <div id="about-creator"></div>
   <NextPrevPosts next={nextPost} prev={previousPost} />
   <CreatorSection creatorObj={creatorObj} />
   <ShareSection postSlug={slug} postTitle={title} postUrl={postUrl} />
@@ -92,5 +94,6 @@ const pageHead = {
     customHeading="Related Posts"
     exclude={title}
   />
+  <div id="add-a-comment"></div>
   <CommentSection slug={slug} client:load />
 </Layout>
