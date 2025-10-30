@@ -30,8 +30,8 @@
             "link": "#sanda"
         },
         {
-            "text": "My Girl Level 9999",
-            "link": "#my-girl-level-9999"
+            "text": "Sakamoto Days",
+            "link": "#sakamoto-days"
         },
         {
             "text": "Frieren: Beyond Journey’s End",
@@ -46,12 +46,12 @@
             "link": "#kimi-to-koete-ikiru-nara"
         },
         {
-            "text": "Shadow Devour Protocol",
-            "link": "#shadow-devour-protocol"
+            "text": "A Star Brighter Than the Sun",
+            "link": "#a-star-brighter-than-the-sun"
         },
         {
-            "text": "Baccabride in a Backwater Dungeon",
-            "link": "#baccabride-in-a-backwater-dungeon"
+            "text": "Blue Box",
+            "link": "#blue-box"
         },
         {
             "text": "The Apothecary Diaries",
@@ -220,7 +220,7 @@
             "id": "sakamoto-days",
             "title": {
                 "english": "Sakamoto Days",
-                "romaji": "Sakamoto Days"
+                "romaji": null
             },
             "img": "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog7/sakamoto-days.webp",
             "link": "https://www.netflix.com/in/title/81663325",
@@ -429,14 +429,14 @@
                 "romaji": null
             },
             "img": "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog7/kimi-to-koete.webp",
-            "link": "https://anikawa.vercel.app/show/xyz507/kimi-to-koete-ikiru-nara",
+            "link": "https://www.crunchyroll.com/series/GT00362308/with-you-our-love-will-make-it-through",
             "ratings": {
                 "imdb": {
                     "link": "https://www.imdb.com/title/tt9999998/",
                     "rating": "7.8"
                 },
                 "mal": {
-                    "link": "https://myanimelist.net/anime/99998/Kimi_to_Koete_Ikiru_Nara",
+                    "link": "https://myanimelist.net/anime/60765/Kimi_to_Koete_Koi_ni_Naru?q=With%20You%2C%20Our%20Love%20Will%20Make%20It%20Through&cat=anime",
                     "rating": "8.0"
                 }
             },
@@ -456,8 +456,8 @@
             "streaming": [
                 {
                     "platform": "Crunchyroll",
-                    "link": "https://www.crunchyroll.com/series/G9999998/kimi-to-koete-ikiru-nara",
-                    "message": "Streaming globally with sub and dub options; check region availability"
+                    "link": "https://www.crunchyroll.com/series/GT00362308/with-you-our-love-will-make-it-through",
+                    "message": "paid"
                 }
             ],
             "justwatch": "https://www.justwatch.com/us/tv-show/kimi-to-koete-ikiru-nara",
@@ -496,14 +496,14 @@
                 "romaji": "Taiyou yori mo Mabushii Hoshi"
             },
             "img": "https://ik.imagekit.io/nwstforna/AnimeAstra/Blog7/a-star-brighter.webp",
-            "link": "https://anikawa.vercel.app/show/xyz514/a-star-brighter-than-the-sun",
+            "link": "https://www.primevideo.com/detail/0FDNZG74Z3YIIIQ4HPWX966TO2/ref=atv_dp_share_cu_r",
             "ratings": {
                 "imdb": {
-                    "link": "https://www.imdb.com/title/tt31518652/",
+                    "link": "https://www.imdb.com/title/tt36987681/",
                     "rating": "N/A"
                 },
                 "mal": {
-                    "link": "https://myanimelist.net/anime/56490/Taiyou_yori_mo_Mabushii_Hoshi",
+                    "link": "https://myanimelist.net/anime/60969/Taiyou_yori_mo_Mabushii_Hoshi?q=%E2%80%9CA%20Star%20Brighter%20Than%20the%20Sun&cat=anime",
                     "rating": "N/A"
                 }
             },
@@ -522,9 +522,9 @@
             },
             "streaming": [
                 {
-                    "platform": "Amazon Prime Video",
-                    "link": "https://www.amazon.com/dp/B0CLX2STARBRIGHTER",
-                    "message": "Confirmed for Fall 2025; streaming details to be updated closer to release"
+                    "platform": "Prime Video",
+                    "link": "https://www.primevideo.com/detail/0FDNZG74Z3YIIIQ4HPWX966TO2/ref=atv_dp_share_cu_r",
+                    "message": "paid"
                 }
             ],
             "justwatch": "https://www.justwatch.com/us/tv-show/a-star-brighter-than-the-sun",
